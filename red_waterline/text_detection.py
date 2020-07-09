@@ -770,9 +770,15 @@ if __name__ == '__main__':
 
     # ch #(UpG_161817, )
     # 1 正常晕染
-    imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161519.jpg'
+    imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161519.jpg'  # 正常晕染
+    imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161601.jpg'  # 轻微晕染
+
     # 2 粗线晕染
-    # imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161817.jpg'
+    imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161817.jpg'
+    imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161903.jpg'
+    imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161913.jpg'
+
+
     # 3 正常1
     # imagePath = r'E:\DataSet\redline_ok\redline_normal\UpG_092349.jpg'
     # 3 正常2
