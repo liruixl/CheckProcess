@@ -1,15 +1,11 @@
-from  red_waterline.text_detection import bloom_debug, bloom2_debug, \
+from  red_waterline.redline_detection import bloom_debug, bloom2_debug, \
     separate_color
 
 from tools.imutils import cv_imread
 import cv2
 import numpy as np
-from red_waterline.union_find import UnionFind
-import os
 
 import matplotlib.pyplot as plt
-
-
 
 
 # 回调函数，x表示滑块的位置，本例暂不使用
@@ -17,14 +13,7 @@ def nothing(x):
     pass
 
 def hsv_trackbar():
-    # 1 正常晕染
-    # imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161831.jpg'
-    # 2 粗线晕染
-    # imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161817.jpg'
-    # 3 正常1
-    imagePath = r'E:\DataSet\redline_ok\redline_normal\UpG_092349.jpg'
-    # 3 正常2
-    # imagePath = r'E:\DataSet\redline_ok\redline_normal\UpG_092610.jpg'
+    imagePath = r'E:\DataSet\fiber\fiber_img_1\00168.jpg'
 
     img = cv_imread(imagePath)
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -140,16 +129,9 @@ def gary_trackbar():
         cv2.imshow('image', np.vstack((res_ori, ser)))
 
 
-def a(x,y):
-    return x+y
-
-
 
 if __name__ == '__main__':
-    # bloom2_debug()
-    # gary_trackbar()
-    c = a(1,y=2)
-    print(c)
+    hsv_trackbar()
 
 
 

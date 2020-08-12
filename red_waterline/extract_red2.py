@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 from tools.imutils import cv_imread
-from red_waterline.text_detection import detect_bloom2
+from red_waterline.redline_detection import detect_bloom2
 
 def get_first(fushi):
     img = fushi.copy()
@@ -147,6 +147,7 @@ if __name__ == '__main__':
 
 
     img_path = r'E:\DataSet\redline\UpG_redline\UpG_161436.jpg'
-    way_3(img_path)
+    img = cv_imread(img_path)
+    way_3(img,debug=True)
     cv2.waitKey(0)
     cv2.destroyAllWindows()

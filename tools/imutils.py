@@ -52,7 +52,19 @@ def _var_max_interclass(img, calc_zero=True):
 def separate_color(img, color = 'red'):
 
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-    if color == 'red':
+    # H: （100，130）S: （75，225） V: （50，255) 背景未被去掉
+    if color == 'bright_blue':
+        # lower_hsv = np.array([100, 75, 50]) # 背景并没有过滤阈值太大
+        # high_hsv = np.array([130, 225, 255])
+
+        # lower_hsv = np.array([110, 125, 70])  # 怎么提的都是背景了，难道背景多?
+        # high_hsv = np.array([120, 175, 100])
+
+        lower_hsv = np.array([95, 70, 220])  # 单独截取 亮蓝 部分
+        high_hsv = np.array([110, 160, 255])
+
+        mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
+    elif color == 'red':
         lower_hsv = np.array([165, 43, 46])  # 提取颜色的低值
         high_hsv = np.array([180, 255, 255])  # 提取颜色的高值
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)

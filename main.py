@@ -1,26 +1,31 @@
+
+
+
 import sys
 
 
-def solve(size, arr):
-
-    idxs = arr.copy()
-    for i in range(size):
-
-        while True:
-            idx = idxs[arr[i]]
-            if idx == i or arr[i] == arr[idx]:
-                break
-
-            temp = arr[i]
-            arr[i] = arr[idx]
-            arr[idx] = temp
-
-    return arr
-
 
 if __name__ == '__main__':
-    size = 8
-    arr = [7,6,5,4,0,1,2,3]
+    m = 2
+    n = 5
 
-    solve(size, arr)
-    print(arr)
+    res = []
+    one = []
+
+    def dfs(idx, one, res):
+
+        if len(one) == m:
+            a = one.copy()
+            res.append(a)
+
+        for i in range(idx, n + 1):
+            one.append(i)
+            dfs(i + 1, one, res)
+            one.pop(-1)
+
+    dfs(1, one, res)
+
+    print(res)
+
+    for pp in res:
+        print('{0} {1}'.format(pp[0], pp[1]))

@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img = cv2.imread(r'../img/cu_line2.png')
+img = cv2.imread(r'../img/fiber_bright_blue_1.jpg')
 
 #  H [0, 179] S [0, 255] V [0, 255]
 #1  H [0,30]/[160,180] S [0,75]    V [100, 180]
