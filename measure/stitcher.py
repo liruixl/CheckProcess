@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
-
+from red_waterline.union_find import UnionFind
 
 class Stitcher:
 
@@ -11,10 +10,10 @@ class Stitcher:
 
     def stitch(self, dectect_img, normal_img, ratio=0.75, reproThresh=4, showMathes=False):
 
-        # imgaeB : 模板图
+        # imgaeB : 模板图,即正常图像
         (imageB, imageA) = normal_img, dectect_img
         # 第一步：计算kpsA和dpsA
-        method = self.methods[1]
+        method = self.methods[2]
         (kpsA, dpsA) = self.detectandcompute(imageA, method=method)
         (kpsB, dpsB) = self.detectandcompute(imageB, method=method)
 
@@ -29,8 +28,9 @@ class Stitcher:
         print('match point:', len(kpsA))
         print('match point:', len(kpsB))
 
-        print('match:', len(matches))
-        print(matches[:10])
+        print('matches:', len(matches))
+
+        off_x, off_y = self.find_offset(kpsA, kpsB, matches, status)
 
         # 第四步：使用cv2.warpPerspective获得经过H变化后的图像 1w 0h
         result = cv2.warpPerspective(imageA, H, (imageA.shape[1] + imageB.shape[1], imageB.shape[0]))
@@ -39,6 +39,7 @@ class Stitcher:
         if self.debug:
             cv2.imshow('detect img', dectect_img)
             cv2.imshow('normal img', normal_img)
+
             cv2.imshow('detect warpPerspective', result)
             cv2.imshow('aligend', aligend)
             cv2.waitKey(0)
@@ -50,7 +51,71 @@ class Stitcher:
             # 第六步：对图像的关键点进行连接
             via = self.showMatches(imageA, imageB, kpsA, kpsB, matches, status)
 
-        return aligend
+        return off_x, off_y
+
+
+    def find_offset(self, kpsA, kpsB, matches, status, offset=5):
+        ptAs = []
+        ptBs = []  # B代表的是模板图像，查询queryImg
+
+        # 一般来说，检测的范围要比模板图像的范围大，否则就是检测不全
+        # 提供正确估计的好的匹配被叫做inliers
+        for (trainIdx, queryIdx), s in zip(matches, status):
+            if s == 1:
+                ptA = (int(kpsA[queryIdx][0]), int(kpsA[queryIdx][1]))
+                ptB = (int(kpsB[trainIdx][0]), int(kpsB[trainIdx][1]))
+                ptAs.append(ptA)
+                ptBs.append(ptB)
+
+        n = len(ptAs)
+        print('inliers points:', n)
+
+        uf = UnionFind(n)
+
+        for i in range(n):
+            for j in range(i + 1, n):
+                pp1 = [ptAs[i][0], ptAs[i][1], ptBs[i][0], ptBs[i][1]]  # like[xmin, ymin, xmax, ymax]
+                pp2 = [ptAs[j][0], ptAs[j][1], ptBs[j][0], ptBs[j][1]]
+
+                off1 = (pp1[2] - pp1[0], pp1[3] - pp1[1])
+                off2 = (pp2[2] - pp2[0], pp2[3] - pp2[1])
+
+                if abs(off2[0] - off1[0]) < offset and abs(off2[1] - off1[1]) < offset:
+                    uf.union(i, j)
+
+        point_set = dict()
+        for i in range(n):
+            if uf.find(i) == i:
+                point_set[i] = []
+
+        for i in range(n):
+            p = uf.find(i)
+            point_set[p].append(i)
+
+        most_point_id = -1
+        size = -1
+
+        for id, ps in point_set.items():
+            if len(ps) > size:
+                size = len(ps)
+                most_point_id = id
+
+        print('points are splited to set count:', uf.get_count())
+        print('most point set id:', most_point_id, ' point nums:', len(point_set[most_point_id]))
+
+        pps = point_set[most_point_id]
+        off_x = 0
+        off_y = 0
+        for i in range(len(pps)):
+            p2p = [ptAs[i][0], ptAs[i][1], ptBs[i][0], ptBs[i][1]]
+            off_x += (p2p[0] - p2p[2])
+            off_y += (p2p[1] - p2p[3])
+
+        off_x = off_x // len(pps)
+        off_y = off_y // len(pps)
+
+        print('相对原图的偏移量为', off_x, off_y)
+        return off_x, off_y
 
     def showMatches(self, imageA, imageB, kpsA, kpsB, matches, status):
         # 将两个图像进行拼接
@@ -69,9 +134,6 @@ class Stitcher:
 
                 cv2.circle(via, ptA, 5, (0, 0, 255), 1)
                 cv2.circle(via, ptB, 5, (0, 0, 255), 1)
-
-
-
         cv2.imshow('line draw', via)
         cv2.waitKey(0)
 
@@ -96,11 +158,8 @@ class Stitcher:
             # 根据索引找出符合条件的位置
             kpsA = np.float32([kpsA[i] for (_, i) in matches])
             kpsB = np.float32([kpsB[i] for (i, _) in matches])
-
             (H, status) = cv2.findHomography(kpsA, kpsB, cv2.RANSAC, reproThresh)
 
-            print(H)
-            print(status)
             return (matches, H, status)
         return None
 
@@ -134,21 +193,22 @@ class Stitcher:
 
 if __name__ == '__main__':
     # 行徽模板
-    # refFilename = r'img_hanghui/zhongnong_uv.jpg'
+    # refFilename = r'../hanghui/img_hanghui/zhongnong_uv.jpg'
 
     # 团花模板
-    refFilename = r'img_tuanhua/tuanhua_uv_1.jpg'
+    refFilename = r'../hanghui/img_tuanhua/tuanhua_uv_1.jpg'
 
     print("Reading reference image : ", refFilename)
     imReference = cv2.imread(refFilename, cv2.IMREAD_COLOR)
 
     # Read image to be aligned
-    imFilename = r'img_tuanhua/tuanhua_uv_3.jpg'
+    imFilename = r'../hanghui/img_tuanhua/test_1.JPG'
 
-    # imFilename = r'img_dect/tuanhua_2.jpg'
+    # imFilename = r'../hanghui/img_dect/tuanhua_2.jpg'
 
     print("Reading image to align : ", imFilename)
     im = cv2.imread(imFilename, cv2.IMREAD_COLOR)
+
 
     stitcher = Stitcher()
     stitcher.debug = True

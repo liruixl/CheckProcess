@@ -6,7 +6,7 @@ def find_tuanhua_roi():
 
     imFilename = r'img_tuanhua/tuanhua_uv_4.jpg'
     # imFilename = r'img_hanghui/zhongnong_uv.jpg'
-    imFilename = r'img_dect/tuanhua_1.jpg'
+    # imFilename = r'img_dect/tuanhua_1.jpg'  # 变造
 
     print("Reading image to align : ", imFilename)
     im = cv2.imread(imFilename, cv2.IMREAD_COLOR)
@@ -22,16 +22,26 @@ def find_tuanhua_roi():
 
     H, W = gray.shape
 
-    roi = np.zeros((H, W), dtype=np.int8)
+    roi = np.zeros((H, W), dtype=np.uint8)
 
     # 绘制轮廓
     cv2.drawContours(im, contours, -1, (0, 0, 255), 2, lineType=cv2.LINE_AA)
-    cv2.drawContours(roi, contours, -1, 255, -1, lineType=cv2.LINE_AA)
+    for cnt in contours:
+        if cv2.contourArea(cnt) > H*W//2:
+            cv2.drawContours(roi, [cnt], 0, 255, -1, lineType=cv2.LINE_AA)
+
+    # 平滑轮廓
+    # median = cv2.medianBlur(gray, 5)
+    # _, contours, hierarchy = cv2.findContours(gray, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    # roi_smooth = np.zeros((H, W), dtype=np.uint8)
+    # cv2.drawContours(roi_smooth, contours, -1, 255, -1, lineType=cv2.LINE_AA)
+
 
     # 显示图像
+    cv2.imshow('gray', gray)
     cv2.imshow('Contours', im)
     cv2.imshow('roi', roi)
-    cv2.waitKey()
+    cv2.waitKey(0)
     cv2.destroyAllWindows()
 
     CONTOURS_1 = contours  # 保留一下，以防用到
@@ -44,7 +54,6 @@ def find_tuanhua_roi():
         RECTS_1.append([x, y, x + w, y + h])
         AREA_1.append(area)
 
-    cv2.imshow('?', gray)
     cv2.waitKey(0)
 
 if __name__ == '__main__':

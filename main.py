@@ -1,31 +1,37 @@
 
-
-
 import sys
 
 
 
+
 if __name__ == '__main__':
-    m = 2
-    n = 5
 
-    res = []
-    one = []
+    kmap = {')': '(', ']': '['}
 
-    def dfs(idx, one, res):
+    kuohaos = ')(][][)('
+    ans = 0
 
-        if len(one) == m:
-            a = one.copy()
-            res.append(a)
+    st = []
 
-        for i in range(idx, n + 1):
-            one.append(i)
-            dfs(i + 1, one, res)
-            one.pop(-1)
+    for i in range(len(kuohaos)):
 
-    dfs(1, one, res)
+        c = kuohaos[i]
+        if c in kmap.keys():
+            match = False
 
-    print(res)
+            while len(st) > 0:
+                if st[-1] == kmap[c]:
+                    st.pop(-1)
+                    match = True
+                    break
+                else:
+                    ans += 1
+                    st.pop()
 
-    for pp in res:
-        print('{0} {1}'.format(pp[0], pp[1]))
+            if not match:
+                ans += 1
+        else:
+            st.append(c)
+
+    print(ans)
+

@@ -72,15 +72,15 @@ def crop_background():
 
 
 
-
-
-
 def crop_zp():
-    test_dir = r'E:\YHProject\票据处理\DataSet\IR_zengguang\img'
-    anno_dir = r'E:\YHProject\票据处理\DataSet\IR_zengguang\anno'
+    # test_dir = r'E:\YHProject\票据处理\DataSet\IR_zengguang\img'
+    # anno_dir = r'E:\YHProject\票据处理\DataSet\IR_zengguang\anno'
 
-    dst0_dir = r'E:\DataSet\IR\zp_block\0'
-    dst1_dir = r'E:\DataSet\IR\zp_block\1'
+    test_dir = r'E:\YHProject\票据处理\DataSet\IR'
+    anno_dir = r'E:\YHProject\票据处理\DataSet\IR_anno'
+
+    dst0_dir = r'E:\DataSet\IR\zp_block_whole\0'
+    dst1_dir = r'E:\DataSet\IR\zp_block_whole\1'
 
     imgnames = os.listdir(test_dir)
     imgpaths = [os.path.join(test_dir, img) for img in imgnames]
@@ -144,4 +144,4 @@ if __name__ == '__main__':
     # cv2.imshow('res', img)
     # cv2.waitKey(0)
 
-    crop_background()
+    crop_zp()

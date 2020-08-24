@@ -13,7 +13,25 @@ def nothing(x):
     pass
 
 def hsv_trackbar():
-    imagePath = r'E:\DataSet\fiber\fiber_img_1\00168.jpg'
+    '''
+
+    # red fiber
+    # 粗略统计 [110, 80, 40] [150, 160, 140]
+    # 精细统计 [146, 80, 75] [154, 120, 120] 背景好多也来了
+    # hsvbar 【130/135/140，60，65】【160， 150/160，140】
+    # 130 用于浅色红暗红，135用于亮红
+
+    :return:
+    '''
+
+    imagePath = r'E:\DataSet\fiber\fiber_img_1\01224.jpg'  # 浅蓝
+
+
+    # red : [00038, 00039, 00278]
+
+    imagePath = r'E:\DataSet\fiber\f_red\00782.jpg'  # red
+
+
 
     img = cv_imread(imagePath)
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -21,14 +39,14 @@ def hsv_trackbar():
     cv2.namedWindow('image', cv2.WINDOW_KEEPRATIO)
 
     # 创建RGB三个滑动条
-    cv2.createTrackbar('H1', 'image', 170, 180, nothing)
-    cv2.createTrackbar('H2', 'image', 180, 180, nothing)
+    cv2.createTrackbar('H1', 'image', 130, 180, nothing)
+    cv2.createTrackbar('H2', 'image', 160, 180, nothing)
 
     cv2.createTrackbar('S1', 'image', 60, 255, nothing)
-    cv2.createTrackbar('S2', 'image', 115, 255, nothing)
+    cv2.createTrackbar('S2', 'image', 160, 255, nothing)
 
-    cv2.createTrackbar('V1', 'image', 70, 255, nothing)
-    cv2.createTrackbar('V2', 'image', 120, 255, nothing)
+    cv2.createTrackbar('V1', 'image', 65, 255, nothing)
+    cv2.createTrackbar('V2', 'image', 140, 255, nothing)
 
     res = img.copy()
     while True:

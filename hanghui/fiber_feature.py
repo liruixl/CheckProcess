@@ -86,12 +86,14 @@ def tongji_width():
     plt.show()
 
 
-def fiber_hsv():
+def fiber_hsv_hist():
     impath = r'E:\DataSet\fiber\fiber_img_1\00354.jpg'
 
-    imdir = r'E:\DataSet\fiber\f_blue'  # 保存明显blue的img文件夹
+    imdir = r'E:\DataSet\fiber\f_red'  # 保存明显blue的img文件夹
     imnamelist = os.listdir(imdir)
     imnames = [os.path.join(imdir, f) for f in imnamelist]
+
+    print('image num : ', len(imnames))
 
     HC = []
     SC = []
@@ -127,10 +129,11 @@ def fiber_hsv():
             for j in range(0, W):
                 is_in = cv2.pointPolygonTest(contours[0], (i, j), False)
 
-                if is_in >= 0:
+                if is_in > 0.8:
                     HC.append(hsv[i][j][0])
                     SC.append(hsv[i][j][1])
                     VC.append(hsv[i][j][2])
+
 
     plt.hist(HC, 180)
     plt.show()
@@ -147,14 +150,22 @@ if __name__ == '__main__':
     # name = '00619.jpg'  # 浅蓝 false
     #
     # name = '00618.jpg'  # 浅红 false
+    # 粗略统计 [110, 80, 40] [150, 160, 140]
+    # 精细统计 [146, 80, 75] [154, 120, 120]
     # name = '00714.jpg'  # 浅红 ok
-    ppp = r'E:\DataSet\fiber\fiber_img_1\00168.jpg'
-    im = cv2.imread(ppp)
-    mask, res = separate_color(im, 'bright_blue')
 
-    # cv2.namedWindow('res', cv2.WINDOW_NORMAL)
-    cv2.imshow('mask', mask)
-    cv2.imshow('res', im)
 
-    cv2.waitKey(0)
+
+    # 分离颜色可视化
+    # ppp = r'E:\DataSet\fiber\fiber_img_1\01224.jpg'
+    # im = cv2.imread(ppp)
+    # mask, res = separate_color(im, 'bright_blue')
+    #
+    # # cv2.namedWindow('res', cv2.WINDOW_NORMAL)
+    # cv2.imshow('mask', mask)
+    # cv2.imshow('res', im)
+    #
+    # cv2.waitKey(0)
+
+    fiber_hsv_hist()
 

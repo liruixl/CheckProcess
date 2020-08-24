@@ -10,6 +10,7 @@ from check_template import CheckTemplate
 from findisExist import isExist, custom_threshold_old, constract_brightness, threshold_demo
 from red_waterline.extract_red2 import way_3
 
+from tools.imutils import cv_imread
 # 检测红外保护油墨字体
 # 20200616 包含红水线
 
@@ -106,7 +107,7 @@ colors = np.array(colors, dtype=np.uint8).reshape(len(colors), 3)
 threshold = 0.8
 
 check_scale = (1330, 630)
-template_dir = r'C:\Users\lirui\Desktop\票据处理\ch\parts_1392_628'
+template_dir = r'E:\YHProject\票据处理\ch\parts_1392_628'
 
 
 # 全局变量，也可以传入模板匹配函数中
@@ -209,23 +210,37 @@ def template_match(upg_img_path, upir_img_path, method=cv.TM_CCOEFF_NORMED):
     return ids, locs, scores, isinks
 
 
+
 def template_demo():
+    work_dir = r'E:\YHProject\CheckProcess\img'
     temp_img = os.path.join(work_dir, 'cut1.png')
+    temp_img = os.path.join(work_dir, r'huanhui_temp.jpg')
+
+    target_img = r'E:\YHProject\票据处理\各行支票汇总\07.东莞银行\清分支票\02\Upuv.jpg'
+
     temp = cv.imread(temp_img)
-    target = cv.imread(target_img)
+    # temp = temp[:, :, :3]
+    target = cv_imread(target_img)
+    print(temp.shape)
+    print(target.shape)
     cv.imshow("template", temp)
+    cv.imshow("target", target)
+
+    cv.waitKey(0)
     # cv.imshow("target", target)
     # 3种模板匹配方法
     # methods = [cv.TM_SQDIFF_NORMED, cv.TM_CCORR_NORMED, cv.TM_CCOEFF_NORMED]
 
     # 6 种
-    methods = ['cv.TM_SQDIFF', 'cv.TM_SQDIFF_NORMED',
-               'cv.TM_CCORR','cv.TM_CCORR_NORMED',
-               'cv.TM_CCOEFF', 'cv.TM_CCOEFF_NORMED']
+    # methods = ['cv.TM_SQDIFF', 'cv.TM_SQDIFF_NORMED',
+    #            'cv.TM_CCORR','cv.TM_CCORR_NORMED',
+    #            'cv.TM_CCOEFF', 'cv.TM_CCOEFF_NORMED']
 
     methods = [cv.TM_SQDIFF_NORMED, cv.TM_CCORR_NORMED, cv.TM_CCOEFF_NORMED]
+    methods = [cv.TM_CCORR_NORMED]
 
     t_height, t_width = temp.shape[:2]
+
     for method in methods:
         # method = eval(meth)
         print(method)
@@ -252,6 +267,7 @@ def template_demo():
                    font, 0.5, (0, 255, 0), thickness=1, lineType=cv.LINE_AA)  # green
 
         cv.imshow("matching-"+np.str(method), target_copy)
+        cv.waitKey(0)
 
 
 def template_multi_target():
@@ -388,11 +404,13 @@ if __name__ == '__main__':
     # img_path = os.path.join(zong, '092342_UpG.jpg')
     # img_ir_path = os.path.join(zong, '092342_Upir.jpg')
 
-    img_path = r'E:\DataSet\hand_check_test\ch\UpG\UpG_153614.bmp'
-    img_ir_path = r'img\Upir_1.jpg'
+    # =====
+    # img_path = r'E:\DataSet\hand_check_test\ch\UpG\UpG_153614.bmp'
+    # img_ir_path = r'img\Upir_1.jpg'
+    #
+    # save_dir =  r'result_json'
+    #
+    # demo(img_path,img_ir_path,debug=True,save_dir=save_dir)
 
-    save_dir =  r'result_json'
 
-    demo(img_path,img_ir_path,debug=True,save_dir=save_dir)
-
-
+    template_demo()
