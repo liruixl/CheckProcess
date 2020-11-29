@@ -15,6 +15,7 @@ class BankMeasure:
         _, self.icon_bin = cv2.threshold(icon_gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         self.stitcher = Stitcher()
 
+
     def measure(self, img):
         off_or_none = self.stitcher.stitch(img, self.icon_temp)
 

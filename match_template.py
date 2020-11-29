@@ -127,6 +127,7 @@ def template_match(upg_img_path, upir_img_path, method=cv.TM_CCOEFF_NORMED):
     # target = cv.imread(upg_img_path)
     # target_upir = cv.imread(upir_img_path)
 
+    ori_img = cv_imread(upg_img_path)
     target = cv_imread(upg_img_path)
     target_upir = cv_imread(upir_img_path)
 
@@ -197,8 +198,15 @@ def template_match(upg_img_path, upir_img_path, method=cv.TM_CCOEFF_NORMED):
     xmin, ymin = redline_tl = (top_right[0] + 4, top_right[1] - 6)
     xmax, ymax = redline_br = (redline_tl[0] + 666, redline_tl[1] + 66)
 
-    redline_img = target[ymin: ymax, xmin:xmax]
-    damage = way_3(redline_img, debug=False) # 展示红水线晕染、刮擦白墨团等检测结果
+    # 这里 红水线图像
+    # redline_img = target[ymin: ymax, xmin:xmax]  # target 已经被裁剪了
+    redline_img = ori_img[ymin:ymax, xmin:xmax]
+
+    # cv.imshow('redline', redline_img)
+
+    damage = way_3(redline_img, debug=False)  # 展示红水线晕染、刮擦白墨团等检测结果
+
+    # 将红水线结果也添加到结果中
     ids.append(len(ids))
     locs.append([xmin, ymin, xmax, ymax])
     scores.append(1.0)
@@ -319,15 +327,15 @@ def cv_imread(filePath):
 
 
 def demo(img_path, img_ir_path, debug=False, save_dir=None):
+
+
+    # 核心模板匹配、晕染检测算法
     ids, locs, scores, isinks = template_match(img_path, img_ir_path)
 
-    # print(ids)
-    # print(locs)
-    # print(scores)
-    # print(isinks)
-
+    print(img_path, isinks[-1])  # 红水线结果
+    # 以下是保存和可视化部分
     image_name = re.split('\\\\+|/+', img_path)[-1].split('.')[0]
-    print('detect ink: ', image_name)
+    # print('detect ink: ', image_name)
     if save_dir is not None:
         save_json = {}
         for i in range(len(ids)):
@@ -339,7 +347,6 @@ def demo(img_path, img_ir_path, debug=False, save_dir=None):
         target = cv_imread(img_path)
         target_ir = cv_imread(img_ir_path)
 
-
         for idx in range(len(ids)):
             key = ids[idx]
             score = scores[idx]
@@ -349,16 +356,17 @@ def demo(img_path, img_ir_path, debug=False, save_dir=None):
             tl = (xmin, ymin)
             br = (xmax, ymax)
 
-            # if idx ==16:
+            # if idx == 16:
             #     dst = target[ymin:ymax, xmin:xmax]
             #     dst_ir = target_ir[ymin:ymax, xmin:xmax]
             #     cv.imshow("crop", dst)
             #     cv.imshow('crop_ir', dst_ir)
             #     cv.waitKey(0)
 
+
             cv.rectangle(target, tl, br, colors[key].tolist(), 1)
             font = cv.FONT_HERSHEY_SIMPLEX
-            text = '{0}:{1} {2}'.format(key, score, is_ink)
+            text = '{:d}:{:.2f} {:.2f}'.format(key, score, is_ink)
             cv.putText(target, text, (tl[0], tl[1] - 4),
                        font, 0.5, (0, 255, 0), thickness=1, lineType=cv.LINE_AA)
 
@@ -369,9 +377,6 @@ def demo(img_path, img_ir_path, debug=False, save_dir=None):
         cv.imshow("match_template", target)
         cv.waitKey(0)
         cv.destroyAllWindows()
-
-
-
 
 
 def tst_check100():
@@ -392,25 +397,41 @@ def tst_check100():
             demo(img_path, img_ir_path, debug=True, save_dir=save_dir)
 
 
+
+def tst_0927():
+    # 4 测试正常图
+    check_imgs = ['DwG.bmp', 'Dwir.bmp', 'Dwirtr.bmp', 'Dwuv.bmp', 'Dwuvtr.bmp',
+                  'UpG.bmp', 'Upir.bmp', 'Upirtr.bmp', 'Upuv.bmp', 'Upuvtr.bmp']
+    gn_normal = r'E:\异常图0927\敦南\敦南正常'  # 无误检
+    gn_abnormal = r'E:\异常图0927\敦南\敦南异常'
+
+    dataset = gn_abnormal
+    check_dir = os.listdir(dataset)
+    check_path = [os.path.join(dataset, d) for d in check_dir]
+
+    for p in check_path:
+        imgs = os.listdir(p)
+        upg_path = os.path.join(p, 'UpG.bmp')
+        upir_path = os.path.join(p, 'Upir.bmp')
+        demo(upg_path, upir_path, debug=False, save_dir=None)
+
+
 if __name__ == '__main__':
+    # 1
     # src = cv.imread(target_img, cv.IMREAD_COLOR)
     # cv.namedWindow("check", cv.WINDOW_AUTOSIZE)
     # cv.imshow("check", src)
+    # cv.waitKey(0)
 
-    # img_path = r'C:\Users\lirui\Desktop\temp\check\UpG_nonghang_zhuanzhang.jpg'
-    # img_ir_path = r'C:\Users\lirui\Desktop\temp\check\Upir_nonghang_zhuangzhang.jpg'
+    # 2
+    img_path = r'E:\异常图0927\敦南\敦南异常\95.墨团、涂改、可擦笔、刮擦、红水线\UpG.bmp'
+    img_ir_path = r'E:\异常图0927\敦南\敦南异常\95.墨团、涂改、可擦笔、刮擦、红水线\Upir.bmp'
 
-    # zong = r'C:\Users\lirui\Desktop\票据处理\图片数据20191114\check_UpG_Upir'
-    # img_path = os.path.join(zong, '092342_UpG.jpg')
-    # img_ir_path = os.path.join(zong, '092342_Upir.jpg')
-
-    # =====
+    # 正常有点粗的红水线
     # img_path = r'E:\DataSet\hand_check_test\ch\UpG\UpG_153614.bmp'
     # img_ir_path = r'img\Upir_1.jpg'
-    #
-    # save_dir =  r'result_json'
-    #
-    # demo(img_path,img_ir_path,debug=True,save_dir=save_dir)
 
+    save_dir = r'result_json'
 
-    template_demo()
+    demo(img_path,img_ir_path,debug=True,save_dir=None)
+

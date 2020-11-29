@@ -114,6 +114,11 @@ def separate_color(img, color = 'red'):
         high_hsv = np.array([180, 115, 120])
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
 
+    elif color == 'tuanhua_green':
+        lower_hsv = np.array([0, 0, 120])
+        high_hsv = np.array([90, 200, 255])
+        mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
+
     # cv2.imshow("mask", mask) # 白色为有校提取区域
     # get result
     res = cv2.bitwise_and(img, img, mask=mask)

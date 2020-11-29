@@ -103,6 +103,8 @@ def confidence_percentage(org_img, img):
     #统计被破坏的百分比
     result  = 1 - red_percentage
 
+    print(result)
+
     print("被破坏的百分比为{}%".format(round(result * 100, 2)))
 
     return result
@@ -118,18 +120,16 @@ def way_3(image, debug=False):
     first = get_first(binary_b3)
     img = get_second2(binary_b3, first)
 
-    corrs = detect_bloom2(image, debug=debug)
+    if debug:
+        cv2.imshow('way3 second', img)
+
+    # 检测到的晕染坐标
+    corrs = detect_bloom2(image, debug=True)
 
     for xmin,ymin,xmax,ymax in corrs:
         img[ymin:ymax, xmin:xmax] = 255
-    if debug:
-        cv2.namedWindow("second", cv2.WINDOW_NORMAL)
-        cv2.imshow('second', img)
 
     damage = confidence_percentage(first, img)
-
-    # debug = np.vstack((image,img))
-    # cv2.imshow('res', debug)
 
     return damage
 

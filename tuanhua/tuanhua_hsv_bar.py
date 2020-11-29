@@ -4,8 +4,12 @@ from  red_waterline.redline_detection import bloom_debug, bloom2_debug, \
 from tools.imutils import cv_imread
 import cv2
 import numpy as np
+from red_waterline.union_find import UnionFind
+import os
 
 import matplotlib.pyplot as plt
+
+
 
 
 # 回调函数，x表示滑块的位置，本例暂不使用
@@ -13,25 +17,10 @@ def nothing(x):
     pass
 
 def hsv_trackbar():
-    '''
 
-    # red fiber
-    # 粗略统计 [110, 80, 40] [150, 160, 140]
-    # 精细统计 [146, 80, 75] [154, 120, 120] 背景好多也来了
-    # hsvbar 【130/135/140，60，65】【160， 150/160，140】
-    # 130 用于浅色红暗红，135用于亮红
-
-    :return:
-    '''
-
-    imagePath = r'E:\DataSet\fiber\f_blue_light\00505.jpg'  # 浅蓝
-
-
-    # red : [00038, 00039, 00278]
-
-    # imagePath = r'E:\DataSet\fiber\f_red\00782.jpg'  # red
-
-
+    # 团花H(0,90) S(0,200) V(140,255)
+    imagePath = r'../hanghui/img_tuanhua/tuanhua_uv_1.jpg'
+    imagePath = r'../tuanhua/img/upuv_qian_1.jpg'
 
     img = cv_imread(imagePath)
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -39,13 +28,13 @@ def hsv_trackbar():
     cv2.namedWindow('image', cv2.WINDOW_KEEPRATIO)
 
     # 创建RGB三个滑动条
-    cv2.createTrackbar('H1', 'image', 100, 180, nothing)
-    cv2.createTrackbar('H2', 'image', 150, 180, nothing)
+    cv2.createTrackbar('H1', 'image', 0, 180, nothing)
+    cv2.createTrackbar('H2', 'image', 90, 180, nothing)
 
-    cv2.createTrackbar('S1', 'image', 70, 255, nothing)
-    cv2.createTrackbar('S2', 'image', 190, 255, nothing)
+    cv2.createTrackbar('S1', 'image', 0, 255, nothing)
+    cv2.createTrackbar('S2', 'image', 200, 255, nothing)
 
-    cv2.createTrackbar('V1', 'image', 110, 255, nothing)
+    cv2.createTrackbar('V1', 'image', 140, 255, nothing)
     cv2.createTrackbar('V2', 'image', 255, 255, nothing)
 
     res = img.copy()
@@ -148,7 +137,10 @@ def gary_trackbar():
 
 
 
+
 if __name__ == '__main__':
+    # bloom2_debug()
+    # gary_trackbar()
     hsv_trackbar()
 
 

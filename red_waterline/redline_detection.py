@@ -138,26 +138,38 @@ def constract_brightness(src1, a, g):
 # 注意返回值，实验时就返回结果图像了
 def detect_bloom2(img, debug=False):
 
-    # img_bgr = constract_brightness(img_bgr, 1.5 , 1)
-    # cv2.imshow('duibidu', img_bgr)
     img_bgr = img.copy()  # 用于绘制
     mask_red, redhsv = separate_color(img_bgr, color='red')
     mask_yz, yingzhang = separate_color(img_bgr, color='yingzhang')
     mask_yz = cv2.bitwise_not(mask_yz)
 
     redline = cv2.bitwise_and(redhsv, redhsv, mask=mask_yz)
+    # redline = redhsv
     # ==================================================
     gray = cv2.cvtColor(redline, cv2.COLOR_BGR2GRAY)  # 打算用灰度图去判断深色的晕染线。。
     # ==================================================
 
     _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
-    tempkernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+
+    cnt = 0
+    h, w = binary.shape
+    for i in range(h):
+        for j in range(w):
+            if binary[i][j] > 10:
+                cnt += 1
+
+    print('range should be in ', w * 10, 2 * w * 10)
+    print('红水线比例：', cnt, '/', h * w)
+
+    tempkernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 3))
     ero1 = cv2.erode(binary, tempkernel, iterations=1)
 
     tempkernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 1))
     ero2 = cv2.erode(ero1, tempkernel, iterations=1)
-    # midblur = cv2.medianBlur(ero2, 5)
+
+    if cnt < 2*w*10:
+        ero2 = ero1
 
     # ero2 图可以作为初步判断依据，晕染外的区域基本只剩噪点了
     # 但是对于正常红水线来说，颜色较深的也可能被误检，mmp
@@ -206,6 +218,7 @@ def detect_bloom2(img, debug=False):
             elif (r_x - l_x < 0) and (b_y - t_y < 0):
                 if abs(r_x - l_x) <= 15 and abs(b_y - t_y) <= 10:
                     uf.union(i,j)
+
     # 合并idx结束
     # 处理合并的idx
     rect_merge = []
@@ -240,7 +253,6 @@ def detect_bloom2(img, debug=False):
 
 
 
-
     # 得到初步结果rect_merge，但是会误检正常的粗的红水线,而且很多，nmsl,mmp
     # 所以这一步得到的只能是候选结果
     # 根据面积筛选出可能为红水线的候选框:RES_1
@@ -259,30 +271,6 @@ def detect_bloom2(img, debug=False):
     if debug:
         print('过滤后的候选框;', RES_1)
         print('========================================')
-
-    #  对于正常红水线仍然有误检，分析检测区域的灰度直方图gray
-    # 找一个最大的来实验吧
-    # idx = area_merge.index(max(area_merge))
-    # print('第几个最大：', idx)
-    # xmin, ymin, xmax, ymax = rect_merge[idx]
-    # hist = gray[ymin:ymax, xmin:xmax]
-    # print('裁剪后大小：', hist.shape)
-    # vals = []
-    # h, w = hist.shape
-    # for i in range(0, h):
-    #     for j in range(0, w):
-    #         if hist[i][j] != 0:
-    #             vals.append(hist[i][j])
-    #
-    # H = np.array(vals)
-    # var= np.var(H)
-    # print('方差为：', var)
-    # if debug:
-    #     plt.hist(vals, 255)
-    #     plt.show()
-
-
-
 
     # 再次进行腐蚀（竖着的），膨胀运算，留下团状晕染的区域
     # 如果有轮廓，那么必定是晕染
@@ -317,7 +305,7 @@ def detect_bloom2(img, debug=False):
         cv2.rectangle(img_bgr, (x, y), (x+w, y+h), (0, 255, 0), 1)
 
     if debug:
-        print('是晕染的区域吧:', RECTS_2)
+        print('再次腐蚀是晕染的区域吧:', RECTS_2)
         print('太小过滤掉的框:', len(RECTS_2_TINY), RECTS_2_TINY)
 
     def in_rect(cx,cy, rect):
@@ -397,10 +385,6 @@ def detect_bloom2(img, debug=False):
         print('根据密度可以认为是晕染的区域RES_3:', RES_3)
 
 
-
-
-
-
     if debug:
         cv2.imshow('redline', redline)
         cv2.imshow('separate', np.vstack((gray, binary)))
@@ -414,10 +398,12 @@ def detect_bloom2(img, debug=False):
     # return np.vstack((cv2.cvtColor(blur_bin,cv2.COLOR_GRAY2BGR),
     #                   cv2.cvtColor(res_2, cv2.COLOR_GRAY2BGR),
     #                   img_bgr))  # ero3
+
+    print("返回晕染区域结果：", RECTS_2 + RES_3)
     return RECTS_2 + RES_3   # (xmin, ymin, xmax, ymax)
 
 
-def detect_bloom(img_bgr, debug = False):
+def detect_bloom(img_bgr, debug=False):
 
     mask, img = separate_color(img_bgr, color='red')
 
@@ -615,9 +601,6 @@ def detect_scratch(img, debug=False):
             continue
 
 
-
-
-
     xs, ys, ws, hs = [], [], [], []
     # 4.合并联通域, 基于两个轮廓的距离, 点到轮廓的距离
     for i in range(len(contours)):
@@ -691,8 +674,6 @@ def detect_blackink(img,debug = False):
     # cv2.imshow('detected circles', cimg)
 
 
-
-
 def bloom_demo():
     imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161615.jpg'
     img = cv_imread(imagePath)
@@ -705,6 +686,7 @@ def bloom_demo():
 
     cv2.imshow('result', img)
     cv2.waitKey(0)
+
 
 def bloom_debug():
     # 变造红水线
@@ -733,7 +715,6 @@ def bloom_debug():
             else:
                 cv2.rectangle(img, (x1, 2), (x2, h - 2), (255, 0, 0), 1)  # 窄
 
-
         cv2.imwrite(os.path.join(debug_dir, imgname), img)
 
 
@@ -744,6 +725,18 @@ def gratch_demo():
     detect_scratch(img, debug=True)
 
 
+def bloom_test():
+    """
+    十月份测试集郭南票中的红水线测试。
+    :return:
+    """
+    red_dir = r'E:\异常图0927\红水线晕染'
+    names = os.listdir(red_dir)
+    imgpaths = [os.path.join(red_dir, na) for na in names]
+
+    for imgpath in imgpaths:
+        img = cv_imread(imgpath)
+        detect_bloom2(img, debug=True)
 
 
 if __name__ == '__main__':
@@ -770,25 +763,29 @@ if __name__ == '__main__':
 
     # ch #(UpG_161817, )
     # 1 正常晕染
-    imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161519.jpg'  # 正常晕染
-    imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161601.jpg'  # 轻微晕染
+    # imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161519.jpg'  # 正常晕染
+    # imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161601.jpg'  # 轻微晕染
 
     # 2 粗线晕染
-    imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161817.jpg'
-    imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161903.jpg'
-    imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161913.jpg'
+    # imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161817.jpg'
+    # imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161903.jpg'
+    # imagePath = r'E:\DataSet\redline\UpG_redline\UpG_161913.jpg'
 
 
-    # 3 正常1
+    # 3 正常粗1
     # imagePath = r'E:\DataSet\redline_ok\redline_normal\UpG_092349.jpg'
     # 3 正常2
     # imagePath = r'E:\DataSet\redline_ok\redline_normal\UpG_092623.jpg'
 
+
+    # 最新变造票
+    # imagePath = r'../img/redline/bloom_d_1.jpg'
+
+    imagePath = r'E:\异常图0927\红水线晕染\94.jpg'
     img = cv_imread(imagePath)
 
     # 1.检测晕染，以及刮擦产生的晕染,ok的
     pairs = detect_bloom2(img, debug=True)
-
 
     # 2.检测白墨团，效果不错
     # detect_whiteink(img, debug=False)
@@ -798,6 +795,8 @@ if __name__ == '__main__':
 
     # 4.黑墨团检测
     # detect_blackink(img, debug=True)
+
+    # bloom_test()
 
     cv2.imshow('imread', img)
     cv2.waitKey(0)

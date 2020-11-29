@@ -26,20 +26,25 @@ def hsv_trackbar():
     # 3 正常2
     # imagePath = r'E:\DataSet\redline_ok\redline_normal\UpG_092610.jpg'
 
+
+    # 团花H(0,90) S(0,200) V(140,255)
+    imagePath = r'../hanghui/img_tuanhua/tuanhua_uv_1.jpg'
+    imagePath = r'../tuanhua/img/upuv_gratch_2.jpg'
+
     img = cv_imread(imagePath)
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
     cv2.namedWindow('image', cv2.WINDOW_KEEPRATIO)
 
     # 创建RGB三个滑动条
-    cv2.createTrackbar('H1', 'image', 170, 180, nothing)
-    cv2.createTrackbar('H2', 'image', 180, 180, nothing)
+    cv2.createTrackbar('H1', 'image', 0, 180, nothing)
+    cv2.createTrackbar('H2', 'image', 90, 180, nothing)
 
-    cv2.createTrackbar('S1', 'image', 60, 255, nothing)
-    cv2.createTrackbar('S2', 'image', 115, 255, nothing)
+    cv2.createTrackbar('S1', 'image', 0, 255, nothing)
+    cv2.createTrackbar('S2', 'image', 200, 255, nothing)
 
-    cv2.createTrackbar('V1', 'image', 70, 255, nothing)
-    cv2.createTrackbar('V2', 'image', 120, 255, nothing)
+    cv2.createTrackbar('V1', 'image', 140, 255, nothing)
+    cv2.createTrackbar('V2', 'image', 255, 255, nothing)
 
     res = img.copy()
     while True:
@@ -144,7 +149,8 @@ def gary_trackbar():
 
 if __name__ == '__main__':
     # bloom2_debug()
-    gary_trackbar()
+    # gary_trackbar()
+    hsv_trackbar()
 
 
 
