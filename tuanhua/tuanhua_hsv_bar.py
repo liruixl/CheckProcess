@@ -20,7 +20,10 @@ def hsv_trackbar():
 
     # 团花H(0,90) S(0,200) V(140,255)
     imagePath = r'../hanghui/img_tuanhua/tuanhua_uv_1.jpg'
-    imagePath = r'../tuanhua/img/upuv_qian_1.jpg'
+    # imagePath = r'../tuanhua/img/upuv_qian_1.jpg'
+
+    imagePath = r'../tuanhua/img/upuv_v128.jpg'
+    # imagePath = r'../tuanhua/img/upuv_qian_2.jpg'
 
     img = cv_imread(imagePath)
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)

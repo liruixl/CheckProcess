@@ -781,7 +781,7 @@ if __name__ == '__main__':
     # 最新变造票
     # imagePath = r'../img/redline/bloom_d_1.jpg'
 
-    imagePath = r'E:\异常图0927\红水线晕染\94.jpg'
+    imagePath = r'E:\异常图0927\红水线晕染\24.jpg'
     img = cv_imread(imagePath)
 
     # 1.检测晕染，以及刮擦产生的晕染,ok的

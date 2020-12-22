@@ -65,7 +65,7 @@ class TuanHuaROI:
         self.upuv_box = upuv_img[ymin:ymax, xmin:xmax]
 
         self.text_mask, _ = separate_color(self.upg_box, color="black")
-        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
         self.text_mask = cv2.dilate(self.text_mask, kernel, iterations=1)
 
 
@@ -76,15 +76,16 @@ class TuanhuaMeasure:
     以此可大致确定团花位置
     """
 
-    def __init__(self, bloom_path):
+    def __init__(self, check_dir):
         self.debug = False
 
-        self.th_w = 369
+        self.th_w = 374
         self.th_h = 145
         self.off_x_by_right = 25
         self.off_y_by_top = 10
 
-        TEMP_DIR = r'../tuanhua/20200828_15-39-29'
+        TEMP_DIR = check_dir
+
         upuv = TEMP_DIR + '/' + 'Upuv.bmp'
         upg = TEMP_DIR + '/' + 'UpG.bmp'
         upir = TEMP_DIR + '/' + 'Upir.bmp'
@@ -97,16 +98,13 @@ class TuanhuaMeasure:
 
         self.th_template = TuanHuaROI(upg_img,upir_img, upirtr_img, upuv_img)
 
-        # self.im = cv2.imread(bloom_path, cv2.IMREAD_COLOR)
-
         self.im = self.th_template.upuv_box.copy()
-        gray = cv2.cvtColor(self.im, cv2.COLOR_BGR2GRAY)
 
         # template region  团花左侧区域 中心74
         self.tr_1 = TmpRegionInfo(5, 58 - 20, 30 + 30, 90 + 20, self.im)
 
         # 团花右侧区域
-        self.tr_1 = TmpRegionInfo(325, 74-50, 325+50, 74+50, self.im)
+        # self.tr_1 = TmpRegionInfo(325, 74-50, 325+50, 74+50, self.im)
 
         # 团花上部区域 y[6, 30]超过三十可能带有文字区域了 中心x187
         # self.tr_1 = TmpRegionInfo(187 - 50, 6, 187 + 50, 30, self.im)
@@ -120,38 +118,31 @@ class TuanhuaMeasure:
         # _, self.hsv_mask = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
 
-        # 排除小窟窿的干扰
-        # tempkernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
-        # self.hsv_mask = cv2.dilate(self.hsv_mask, tempkernel, iterations=1)
-        #
-        # tempkernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
-        # self.hsv_mask = cv2.erode(self.hsv_mask , tempkernel, iterations=1)
-
-        cv2.imshow('tuanhua mask', self.hsv_mask)
-        cv2.imshow('tuanhua hsv', self.hsv)
+        cv2.imshow('tuanhua hsv', self.hsv_mask)
         cv2.waitKey(0)
 
 
-        # hsv图像转化为灰度图，然后降噪，在转变为二值图去做最后的匹配
-        hsv_gray = cv2.cvtColor(self.hsv,cv2.COLOR_BGR2GRAY)
+        # hsv -> gray -> denoise -> bin，转化为灰度图，然后降噪，在转变为二值图去做最后的匹配
+        # 这一步去除一些极小的噪点
+        hsv_gray = cv2.cvtColor(self.hsv, cv2.COLOR_BGR2GRAY)
         hsv_gray_denoise = cv2.fastNlMeansDenoising(hsv_gray, h=5.0)
-        cv2.imshow('tuanhua gray', hsv_gray)
-        cv2.imshow('tuanhua gray denoise', hsv_gray_denoise)
-
         th, hsv_gray = cv2.threshold(hsv_gray_denoise, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+
+        # 固定阈值效果不好
         # _, hsv_gray = cv2.threshold(hsv_gray_denoise, 150, 255, cv2.THRESH_BINARY)
-
-        print("OSTU二值化阈值：", th)
-
         # 局部二值化 效果不好
         # hsv_gray = cv2.adaptiveThreshold(hsv_gray_denoise, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, C= 0)
 
+        print("去噪后OSTU二值化的阈值：", th)
+
+
+
         self.hsv_mask = hsv_gray.copy()
 
-        cv2.imshow('tuanhua gray 2', hsv_gray)
-
+        cv2.imshow('denoise hsvmask', hsv_gray)
         cv2.waitKey(0)
 
+        gray = cv2.cvtColor(self.im, cv2.COLOR_BGR2GRAY)
         # _, gray = cv2.threshold(gray, thre, 255, cv2.THRESH_BINARY)
         _, gray = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         # 只寻找最外轮廓 RETR_EXTERNAL RETR_CCOMP
@@ -168,7 +159,7 @@ class TuanhuaMeasure:
                 count += 1
                 cv2.drawContours(self.roi_mask, [cnt], 0, 255, -1, lineType=cv2.LINE_AA)
 
-        assert count == 1, 'Non-standard group flower image template'
+        # assert count == 1, 'Non-standard group flower image template'
 
         # 以右上角为原点，左x，下y，这个区域是文字区域
         self.ignore_x_range = (110, 310)
@@ -192,21 +183,16 @@ class TuanhuaMeasure:
         """
 
         xmin, ymin, xmax, ymax = bnd_box
-        upg_box = upg_img[ymin:ymax, xmin:xmax]
-        upuv_box = upuv_img[ymin:ymax, xmin:xmax]
-        upir_box = upir_img[ymin:ymax, xmin:xmax]
-        upirtr_box = upirtr_img[ymin:ymax, xmin:xmax]
-
 
         upg_box = th_dect.upg_box
         upuv_box = th_dect.upuv_box
         upir_box = th_dect.upir_box
         upirtr_box = th_dect.upirtr_box
 
-
         upg_black_mask, upg_black = separate_color(upg_box, color='black')
-        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
         upg_black_mask = cv2.dilate(upg_black_mask, kernel, iterations=1)
+
 
 
         # 模板匹配左半部分
@@ -227,8 +213,20 @@ class TuanhuaMeasure:
         canvas[10: H+10, 10:W+10] = self.hsv_mask
         cv2.imshow('canvas', canvas)
 
-        # [5, 30]  [x, y]
+        # 根据upuv_box V通道的平均值来判断，hsv阈值
+        # def v_mean(bgrimg):
+        #     hsvimg =
+
         det_hsv_mask, det_hsv = separate_color(upuv_box, color='tuanhua_green')
+
+        tuanhua_hsv = cv2.cvtColor(upuv_box, cv2.COLOR_BGR2HSV)
+        th_v = tuanhua_hsv[:, :, 2]
+        V_mean = np.mean(th_v)
+
+        if V_mean > 125:
+            print('团花亮度: 太亮')
+            det_hsv_mask, det_hsv = separate_color(upuv_box, color='tuanhua_green_v90')
+
         cv2.imshow('dect tuanhua box', upuv_box)
         cv2.imshow('detect tuanhua mask', det_hsv_mask)
 
@@ -371,7 +369,7 @@ class TuanhuaMeasure:
         tempkernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
         binary = cv2.dilate(binary, tempkernel, iterations=1)
 
-        cv2.imshow('text mask', np.vstack([mask, binary]))
+        # cv2.imshow('text mask', np.vstack([mask, binary]))
 
         _, contours, hierarchy = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 
@@ -649,17 +647,26 @@ if __name__ == '__main__':
 
     # bloom_path = r'../hanghui/img_tuanhua/tuanhua_uv_4.jpg'  # 这个最好了
     bloom_path = r'../tuanhua/tuanhua_template_img/normal_tuanhua_01.jpg'
-    tm = TuanhuaMeasure(bloom_path)
-    tm.debug = False
+
+
+    tm_yellow = TuanhuaMeasure(r'../tuanhua/20200828_15-39-29')
+
+    tm_v126 = TuanhuaMeasure(r'../tuanhua/20200828_14-45-08_v128')
+
+    tm_yellow.debug = False
+    tm_v126.debug = False
 
     tuanhuayc = r'E:\异常图0927\郭南异常细分\团花异常'
-    # tuanhuayc = r'E:\异常图0927\敦南\敦南异常'
+    tuanhuayc = r'E:\异常图0927\敦南\敦南异常'
 
-    tuanhuayc = r'E:\异常图0927\华菱异常细分\团花异常'
+
+    # tuanhuayc = r'E:\异常图0927\敦南\敦南正常'
+    #
+    # tuanhuayc = r'../tuanhua'
 
 
     names = os.listdir(tuanhuayc)
-    names = [n for n in names if '178.' in n]  # 116对不齐
+    names = [n for n in names if '团花' in n]  # 116对不齐
 
     # tuanhuayc = r'E:\异常图0927\敦南\敦南正常'
     # names = ['20200828_15-06-02 太淡']
@@ -667,16 +674,17 @@ if __name__ == '__main__':
     # print(names)
 
     for na in names:
+        print('processing ', na)
         imgdir = os.path.join(tuanhuayc, na)
         upuv = imgdir + '/' + 'Upuv.bmp'
 
         upuv_img = cv_imread(upuv)
         h, w, c = upuv_img.shape
 
-        xmin = w - tm.th_w - tm.off_x_by_right
-        ymin = tm.off_y_by_top
-        xmax = xmin + tm.th_w
-        ymax = ymin + tm.th_h
+        xmin = w - TH_W - TH_XOFF_RIGHT
+        ymin = TH_YOFF_TOP
+        xmax = xmin + TH_W
+        ymax = ymin + TH_H
 
         upg = imgdir + '/' + 'UpG.bmp'
         upir = imgdir +'/' + 'Upir.bmp'
@@ -690,7 +698,22 @@ if __name__ == '__main__':
 
         th_dect = TuanHuaROI(upg_img, upir_img, upirtr_img, upuv_img, [xmin, ymin, xmax, ymax])
 
-        score = tm.measure(th_dect, [xmin, ymin, xmax, ymax])
-        print('得分：',score)
+        tuanhua_hsv = cv2.cvtColor(th_dect.upuv_box, cv2.COLOR_BGR2HSV)
+        th_h = tuanhua_hsv[:,:,0]
+        th_s = tuanhua_hsv[:,:,1]
+        th_v = tuanhua_hsv[:,:,2]
+
+
+        v_mean = np.mean(th_v)
+
+        print("tuanhua box hsv mean:", np.mean(th_h), np.mean(th_s), v_mean)
+
+
+
+        score_1 = tm_yellow.measure(th_dect, [xmin, ymin, xmax, ymax])
+        score_2 = tm_v126.measure(th_dect, [xmin, ymin, xmax, ymax])
+
+
+        print('得分：',[score_1, score_2])
 
 

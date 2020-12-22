@@ -78,7 +78,7 @@ def separate_color(img, color = 'red'):
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
     elif color == 'black':
         lower_hsv = np.array([0, 0, 0])
-        high_hsv = np.array([180, 255, 46])
+        high_hsv = np.array([180, 255, 70])  # v(0, 46)
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
     elif color == 'white':
         lower_hsv = np.array([0, 0, 180])  # (0,0,221) V 180 正合适
@@ -115,8 +115,12 @@ def separate_color(img, color = 'red'):
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
 
     elif color == 'tuanhua_green':
-        lower_hsv = np.array([0, 0, 120])
-        high_hsv = np.array([90, 200, 255])
+        lower_hsv = np.array([0, 0, 140])   # v 120 140
+        high_hsv = np.array([90, 200, 255]) # h 90 93 94
+        mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
+    elif color == 'tuanhua_green_v90':
+        lower_hsv = np.array([0, 0, 160])   # v 155 180
+        high_hsv = np.array([93, 200, 255])
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
 
     # cv2.imshow("mask", mask) # 白色为有校提取区域

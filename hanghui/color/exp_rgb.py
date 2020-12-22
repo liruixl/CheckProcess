@@ -6,14 +6,14 @@ import matplotlib.pyplot as plt
 # normal
 # bank_icon = cv2.imread(r'../img_hanghui/zhongnong_uv.jpg')
 
-# blist = [r'img/normal_1.jpg', r'img/normal_2.jpg', r'img/normal_3.jpg', r'img/normal_4.jpg', r'img/normal_5.jpg']
+blist = [r'img/normal_1.jpg', r'img/normal_2.jpg', r'img/normal_3.jpg', r'img/normal_4.jpg', r'img/normal_5.jpg']
 
 # DIY
 # blist = [r'diy/normal_1.jpg', r'diy/normal_2.jpg', r'diy/normal_3.jpg', r'diy/normal_3 (2).jpg', r'diy/normal_4.jpg', r'diy/normal_5.jpg']
 
-blist = [r'img/normal_11.jpg', r'img/normal_12.jpg', r'img/normal_13.jpg', r'img/normal_14.jpg', r'img/normal_15.jpg']
+# blist = [r'img/normal_11.jpg', r'img/normal_12.jpg', r'img/normal_13.jpg', r'img/normal_14.jpg', r'img/normal_15.jpg']
 
-# blist = [r'img/color_1.jpg', r'img/color_2.jpg', r'img/color_3.jpg', r'img/color_4.jpg']
+blist = [r'img/color_1.jpg', r'img/color_2.jpg', r'img/color_3.jpg', r'img/color_4.jpg']
 
 # blist = [r'img/color_4.jpg']
 
@@ -27,7 +27,10 @@ blist = [r'img/normal_11.jpg', r'img/normal_12.jpg', r'img/normal_13.jpg', r'img
 for pt in blist:
     bank_icon = cv2.imread(pt)
 
+    bank_hsv = cv2.cvtColor(bank_icon, cv2.COLOR_BGR2HSV)
+
     bank_gray = cv2.cvtColor(bank_icon, cv2.COLOR_BGR2GRAY)
+
 
     _, bank_bin = cv2.threshold(bank_gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
     element1 = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
@@ -37,9 +40,18 @@ for pt in blist:
     bank_only = cv2.bitwise_and(bank_icon, bank_icon, mask=bank_bin)
     bank_gray_only = cv2.bitwise_and(bank_gray, bank_gray, mask=bank_bin)
 
+
+    v = bank_hsv[:,:,2]
+
+    v_only = cv2.bitwise_and(v, v, mask=bank_bin)
+
     b = bank_only[:,:,0]
     g = bank_only[:,:,1]
     r = bank_only[:,:,2]
+
+
+    v = v_only.ravel()
+    v = [n for n in v if n != 0]
 
 
     b = b.ravel()  # (1, n)
@@ -55,8 +67,12 @@ for pt in blist:
     gy = [n for n in gy if n != 0]
 
     gy_mean = np.mean(gy)
-    gy_var = np.var(gy, ddof=1)
+    gy_var = np.var(gy, ddof=0)
     print('均值和方差分别为', gy_mean, gy_var)
+
+    v_var = np.var(v, ddof=1)
+
+    print('vvv 通道的均值方差', v_var)
 
 
     # 均值方差
@@ -68,8 +84,8 @@ for pt in blist:
     # plt.hist(r, 256)
     # plt.show()
 
-    plt.hist(gy, 256)
-    plt.show()
+    # plt.hist(gy, 256)
+    # plt.show()
 
     # cv2.imshow('img', np.hstack([bank_icon, bank_only]))
     # cv2.imshow('bank_gray', np.hstack([bank_gray, bank_bin]))

@@ -4,9 +4,9 @@ from red_waterline.union_find import UnionFind
 
 class Stitcher:
 
-    def __init__(self):
+    def __init__(self, debug=False):
         self.methods = ['orb', 'sift', 'surf']
-        self.debug = False
+        self.debug = debug
 
     def stitch(self, dectect_img, normal_img, ratio=0.75, reproThresh=4, showMathes=False):
 
@@ -19,20 +19,24 @@ class Stitcher:
 
         # 获得变化的矩阵H
         M = self.matchKeypoint(kpsA, dpsA, kpsB, dpsB, ratio, reproThresh)
-
         if M is None:
             print('Oh!! No!! match failure')
             return None
         (matches, H, status) = M
+        if sum(status) == 0:
+            print('Oh!! No!! match zero')
+            return None
+        # print('detect feature points:', len(kpsA))
+        # print('detect feature points:', len(kpsB))
+        # print('matches:', len(matches))
 
-        print('match point:', len(kpsA))
-        print('match point:', len(kpsB))
-
-        print('matches:', len(matches))
+        if showMathes:
+            # 第六步：对图像的关键点进行连接
+            via = self.showMatches(imageA, imageB, kpsA, kpsB, matches, status)
 
         off_x, off_y = self.find_offset(kpsA, kpsB, matches, status)
 
-        # 第四步：使用cv2.warpPerspective获得经过H变化后的图像 1w 0h
+        # 第四步 已弃用：使用cv2.warpPerspective获得经过H变化后的图像 1w 0h
         result = cv2.warpPerspective(imageA, H, (imageA.shape[1] + imageB.shape[1], imageB.shape[0]))
         aligend = result[0:imageB.shape[0], 0:imageB.shape[1]]
 
@@ -47,10 +51,6 @@ class Stitcher:
         # 第五步：将图像B填充到进过H变化后的图像，获得最终的图像
         # result[0:imageB.shape[0], 0:imageB.shape[1]] = imageB
 
-        if showMathes:
-            # 第六步：对图像的关键点进行连接
-            via = self.showMatches(imageA, imageB, kpsA, kpsB, matches, status)
-
         return off_x, off_y
 
 
@@ -60,6 +60,7 @@ class Stitcher:
 
         # 一般来说，检测的范围要比模板图像的范围大，否则就是检测不全
         # 提供正确估计的好的匹配被叫做inliers
+        # s==1 是代表两个点特征匹配
         for (trainIdx, queryIdx), s in zip(matches, status):
             if s == 1:
                 ptA = (int(kpsA[queryIdx][0]), int(kpsA[queryIdx][1]))
@@ -68,7 +69,6 @@ class Stitcher:
                 ptBs.append(ptB)
 
         n = len(ptAs)
-        print('inliers points:', n)
 
         uf = UnionFind(n)
 
@@ -95,13 +95,15 @@ class Stitcher:
         most_point_id = -1
         size = -1
 
+
         for id, ps in point_set.items():
             if len(ps) > size:
                 size = len(ps)
                 most_point_id = id
 
-        print('points are splited to set count:', uf.get_count())
-        print('most point set id:', most_point_id, ' point nums:', len(point_set[most_point_id]))
+        if self.debug:
+            print('points are splited to set count:', uf.get_count())
+            print('most point set id:', most_point_id, ' point nums:', len(point_set[most_point_id]))
 
         pps = point_set[most_point_id]
         off_x = 0
@@ -114,7 +116,7 @@ class Stitcher:
         off_x = off_x // len(pps)
         off_y = off_y // len(pps)
 
-        print('相对原图的偏移量为', off_x, off_y)
+        # print('相对原图的偏移量为', off_x, off_y)
         return off_x, off_y
 
     def showMatches(self, imageA, imageB, kpsA, kpsB, matches, status):

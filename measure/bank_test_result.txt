@@ -1,0 +1,145 @@
+行徽坐标信息：
+中心点(1140, 78)
+小农行行徽大小：88*88
+大农行行徽大小：96*96
+
+D:\Users\lirui\Anaconda3\python.exe E:/YHProject/CheckProcess/measure/bank_measure.py
+processing 104.粘贴、孔洞、墨团、行徽
+   得分： 0.1
+processing 116.团花、行徽、拼接、刮擦
+   得分： 0.3
+processing 124.缺损、拼接、行徽
+Oh!! No!! match failure
+Oh!! No!! match failure
+   得分： 0.0
+processing 134.行徽
+   得分： 1.0
+processing 135.行徽、
+   得分： 0.3
+processing 136.行徽、
+   得分： 0.3
+processing 137.行徽、荧光笔
+Oh!! No!! match zero
+   得分： 0.2
+processing 138.行徽
+   得分： 1.0
+processing 139.行徽
+   得分： 1.0
+processing 140.行徽
+Oh!! No!! match failure
+   得分： 0.1
+processing 141.行徽
+   得分： 1.0
+processing 142.行徽
+   得分： 0.8999999999999999
+processing 143.行徽
+   得分： 1.0
+processing 144.行徽、烧焦
+Oh!! No!! match failure
+Oh!! No!! match failure
+   得分： 0.0
+processing 145.行徽
+   得分： 1.0
+processing 146.行徽
+   得分： 0.95
+processing 147.行徽、刮擦
+   得分： 0.4
+processing 148.行徽、刮擦
+   得分： 0.4
+processing 159.行徽
+   得分： 0.2
+processing 29.行徽涂改
+Oh!! No!! match failure
+   得分： 0.1
+processing 32.行徽刮擦
+Oh!! No!! match failure
+   得分： 0.1
+processing 33.行徽缺损
+   得分： 0.2
+processing 47.行徽缺损
+Oh!! No!! match failure
+   得分： 0.3
+
+Process finished with exit code 0
+
+
+
+正常行徽测量结果：
+D:\Users\lirui\Anaconda3\python.exe E:/YHProject/CheckProcess/measure/bank_measure.py
+processing 20200828_14-45-18   纤维丝影响
+   得分： 0.4
+processing 20200828_14-57-30   纤维丝影响
+   得分： 0.4
+processing 20200828_15-02-32   纤维丝影响
+   得分： 0.4
+processing 20200828_15-03-39   纤维丝影响
+   得分： 0.4
+processing 20200828_15-05-24   纤维丝影响
+   得分： 0.4
+processing 20200828_15-09-59   纤维丝影响 有点难
+   得分： 0.4
+processing 20200828_15-29-02   添加模板 解决
+   得分： 0.2
+processing 20200828_15-30-23   ??好着呢啊 坐标问题
+   得分： 0.1
+processing 20200828_15-31-20   模板问题
+   得分： 0.4
+processing 20200828_15-31-29  ==模板不太一样 ****
+   得分： 0.1
+processing 20200828_15-31-49
+   得分： 0.4
+processing 20200828_15-32-17  坐标问题
+   得分： 0.2
+processing 20200828_15-36-45  模板问题
+   得分： 0.2
+processing 20200828_15-36-55
+   得分： 0.2
+processing 20200828_15-37-35
+   得分： 0.4
+processing 20200828_15-37-45
+   得分： 0.2
+processing 20200828_15-38-13
+   得分： 0.3
+processing 20200828_15-38-23
+   得分： 0.2
+processing 20200828_15-39-01   可作为模板 大小有差距
+   得分： 0.1
+processing 20200828_15-39-20
+   得分： 0.4
+processing 20200828_15-39-29   好着呢呀？？？
+   得分： 0.1
+processing 20200828_15-41-04   有打印字体？？？
+   得分： 0.4
+processing 20200828_15-43-17
+   得分： 0.4
+processing 20200828_15-43-27
+   得分： 0.4
+processing 20200828_15-43-45
+   得分： 0.3
+
+Process finished with exit code 0
+
+
+
+第二次测试===================================：
+processing 20200828_14-45-18
+   得分： 0.4
+processing 20200828_14-57-30
+   得分： 0.4
+processing 20200828_15-02-32
+   得分： 0.4
+processing 20200828_15-03-39
+   得分： 0.4
+processing 20200828_15-05-24
+   得分： 0.4
+processing 20200828_15-09-59
+   得分： 0.4
+
+
+
+processing 20200828_15-31-29    模板问题
+   得分： 0.2
+processing 20200828_15-37-35    纤维丝
+   得分： 0.4
+processing 20200828_15-41-04    有打印字体
+   得分： 0.4
