@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 import collections
+import copy
 
 
 # 定义字典存放颜色分量上下限
@@ -101,6 +102,24 @@ def getColorList():
     return dict
 
 
+
+
+def get_red_mask(image):
+    img_tmp = copy.deepcopy(image)
+    hsv = cv2.cvtColor(img_tmp, cv2.COLOR_BGR2HSV)
+
+    img = cv2.inRange(hsv, np.array([156, 43, 46]), np.array([180, 255, 255]))
+    # img = cv2.inRange(hsv, np.array([0, 43, 46]), np.array([10, 255, 255]))
+
+    # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    mask = img < 200
+    img_tmp[mask] = (255, 255, 255)
+    # cv2.namedWindow("test", cv2.WINDOW_NORMAL)
+    # cv2.imshow('test', img_tmp)
+    # cv2.waitKey(0)
+    return img_tmp
+
+
 def get_color(frame):
     print('go in get_color')
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
@@ -124,6 +143,8 @@ def get_color(frame):
 
 
 if __name__ == '__main__':
-    filename = 'img/red_line_new/red_3.png'
+    filename = 'img/red_line_new/red_7.png'
     frame = cv2.imread(filename)
+
+    get_red_mask(frame)
     print(get_color(frame))

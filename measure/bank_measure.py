@@ -27,12 +27,10 @@ def paste_to_canvas(dst_h, dst_w, y_off, x_off, img):
 def var_bank(bank_img):
     '''
     :param bank_img: bgr
-    :return:
+    :return: 灰度图方差
     '''
     bank_gray = cv2.cvtColor(bank_img, cv2.COLOR_BGR2GRAY)
     _, bank_bin = cv2.threshold(bank_gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-
-
 
 
 

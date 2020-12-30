@@ -3,7 +3,10 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img = cv2.imread(r'../img/tuanhua_hsv.jpg')
+# 行徽黄色部分 H(22, 35) S(140, 190) V(180, 255)
+path = '../img/bank_icon/yellow.jpg'
+
+img = cv2.imread(path)
 
 #  H [0, 179] S [0, 255] V [0, 255]
 #1  H [0,30]/[160,180] S [0,75]    V [100, 180]

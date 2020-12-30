@@ -118,9 +118,6 @@ class TuanhuaMeasure:
         # _, self.hsv_mask = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
 
-        cv2.imshow('tuanhua hsv', self.hsv_mask)
-        cv2.waitKey(0)
-
 
         # hsv -> gray -> denoise -> bin，转化为灰度图，然后降噪，在转变为二值图去做最后的匹配
         # 这一步去除一些极小的噪点
@@ -133,14 +130,10 @@ class TuanhuaMeasure:
         # 局部二值化 效果不好
         # hsv_gray = cv2.adaptiveThreshold(hsv_gray_denoise, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, C= 0)
 
-        print("去噪后OSTU二值化的阈值：", th)
-
-
+        # print("去噪后OSTU二值化的阈值：", th)
 
         self.hsv_mask = hsv_gray.copy()
 
-        cv2.imshow('denoise hsvmask', hsv_gray)
-        cv2.waitKey(0)
 
         gray = cv2.cvtColor(self.im, cv2.COLOR_BGR2GRAY)
         # _, gray = cv2.threshold(gray, thre, 255, cv2.THRESH_BINARY)
@@ -189,9 +182,10 @@ class TuanhuaMeasure:
         upir_box = th_dect.upir_box
         upirtr_box = th_dect.upirtr_box
 
-        upg_black_mask, upg_black = separate_color(upg_box, color='black')
-        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
-        upg_black_mask = cv2.dilate(upg_black_mask, kernel, iterations=1)
+
+        # upg_black_mask, upg_black = separate_color(upg_box, color='black')
+        # kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+        # upg_black_mask = cv2.dilate(upg_black_mask, kernel, iterations=1)
 
 
 
@@ -230,7 +224,7 @@ class TuanhuaMeasure:
         cv2.imshow('dect tuanhua box', upuv_box)
         cv2.imshow('detect tuanhua mask', det_hsv_mask)
 
-        # 对检测图像也进行少许变造
+        # 对检测图像也进行少许降噪
         hsv_gray = cv2.cvtColor(det_hsv, cv2.COLOR_BGR2GRAY)
         hsv_gray_denoise = cv2.fastNlMeansDenoising(hsv_gray, h=10.0)
         _, hsv_gray = cv2.threshold(hsv_gray_denoise, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
@@ -253,10 +247,10 @@ class TuanhuaMeasure:
         # XOR结果
         xor_mask = cv2.bitwise_xor(canvas, det_canvas)
 
-        A = np.zeros((H + 20, W + 20), dtype=np.uint8)  # 扩大20像素
-        A[10-dy:10-dy+det_H, 10-dx:10-dx+det_W] = upg_black_mask
-        A = cv2.bitwise_not(A)
-        xor_mask = cv2.bitwise_and(xor_mask, A)
+        # A = np.zeros((H + 20, W + 20), dtype=np.uint8)  # 扩大20像素
+        # A[10-dy:10-dy+det_H, 10-dx:10-dx+det_W] = upg_black_mask
+        # A = cv2.bitwise_not(A)
+        # xor_mask = cv2.bitwise_and(xor_mask, A)
 
 
         """
@@ -656,17 +650,17 @@ if __name__ == '__main__':
     tm_yellow.debug = False
     tm_v126.debug = False
 
-    tuanhuayc = r'E:\异常图0927\郭南异常细分\团花异常'
-    tuanhuayc = r'E:\异常图0927\敦南\敦南异常'
+    # tuanhuayc = r'E:\异常图0927\郭南异常细分\团花异常'
+    # tuanhuayc = r'E:\异常图0927\敦南\敦南异常'
 
 
-    # tuanhuayc = r'E:\异常图0927\敦南\敦南正常'
+    tuanhuayc = r'E:\异常图0927\敦南\敦南正常'
     #
     # tuanhuayc = r'../tuanhua'
 
 
     names = os.listdir(tuanhuayc)
-    names = [n for n in names if '团花' in n]  # 116对不齐
+    # names = [n for n in names if '团花' in n]  # 116对不齐
 
     # tuanhuayc = r'E:\异常图0927\敦南\敦南正常'
     # names = ['20200828_15-06-02 太淡']
@@ -674,7 +668,7 @@ if __name__ == '__main__':
     # print(names)
 
     for na in names:
-        print('processing ', na)
+        print('===============processing ', na, '=======================')
         imgdir = os.path.join(tuanhuayc, na)
         upuv = imgdir + '/' + 'Upuv.bmp'
 
@@ -711,8 +705,9 @@ if __name__ == '__main__':
 
 
         score_1 = tm_yellow.measure(th_dect, [xmin, ymin, xmax, ymax])
-        score_2 = tm_v126.measure(th_dect, [xmin, ymin, xmax, ymax])
+        # score_2 = tm_v126.measure(th_dect, [xmin, ymin, xmax, ymax])
 
+        score_2 = 0
 
         print('得分：',[score_1, score_2])
 

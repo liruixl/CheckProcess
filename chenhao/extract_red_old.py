@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 import erzhihua as erzhihua_util
-import hsv_id as hsv_util
 #way_1
 def way_1():
     img = cv2.imread('img/red_line.jpg')
@@ -58,7 +57,7 @@ def get_first(fushi):
     for i in range(h):
         w_count = np.sum(img[i] == 0)
         max_count = max(max_count,w_count)
-        if w_count > w * 1 / 7:
+        if w_count > w * 3 / 7:
             img[i] = 0
             if flag:
                 line_counts += 1
@@ -189,13 +188,13 @@ def test_danhua(ir_img):
             break
         print(black_count)
         img_a = binary[:,i:i+len]
-        # cv2.namedWindow("test", cv2.WINDOW_NORMAL)
-        # cv2.imshow('test', img_a)
-        # cv2.waitKey(0)
+        cv2.namedWindow("test", cv2.WINDOW_NORMAL)
+        cv2.imshow('test', img_a)
+        cv2.waitKey(0)
     return is_danhua
 
 def way_3():
-    image = cv2.imread('img/red_line_new/red_7.png')
+    image = cv2.imread('img/red_line_new/red_5.png')
     # image = cv2.imread('img/UpG_redline/UpG_161314.jpg')
     # image = cv2.imread('img/read_line_5.png')
     cv2.namedWindow("RGB", cv2.WINDOW_NORMAL)
@@ -258,21 +257,16 @@ def way_3():
 
     is_danhua = test_danhua(image)
     con_b = erzhihua_util.constract_brightness(image, 1.0, 1)
-    red_mask = hsv_util.get_red_mask(con_b)
     binary_b1 = erzhihua_util.threshold_demo(con_b)
     binary_b2 = erzhihua_util.local_threshold(con_b)
     binary_b2_fan =blacktowhite(binary_b2)
     # binary_b3_constract = erzhihua_util.constract_brightness(con_b, 1.8, 1)
-    binary_red_mask = erzhihua_util.custom_threshold_old(red_mask)
     binary_b3 = erzhihua_util.custom_threshold_old(con_b)
-
-
     # pengzhang = erzhihua_util.dilate_demo(binary_b2)
     fushi = erzhihua_util.erode_demo(binary_b2)
     # pengzhang2 = erzhihua_util.dilate_demo(fushi)
     # ddenoo = erzhihua_util.denoosing(binary_b2, 3)
-    img, _, max_count = get_first(binary_b3)
-    _, line_counts, _ = get_first(binary_red_mask)
+    img, line_counts, max_count = get_first(binary_b3)
     img = get_second2(binary_b3, img)
     print("红水线条数：", line_counts)
     print("红水线长度：", max_count) #630以内则为被破坏

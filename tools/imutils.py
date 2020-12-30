@@ -1,13 +1,15 @@
 import numpy as np
 import cv2
+import os
 from collections import Counter
 
 # 读取图像，解决imread不能读取中文路径的问题
 def cv_imread(filePath):
+    assert os.path.isfile(filePath)
     cv_img=cv2.imdecode(np.fromfile(filePath,dtype=np.uint8),-1)
     # imdecode读取的是rgb，如果后续需要opencv处理的话，需要转换成bgr，转换后图片颜色会变化
     # cv_img=cv2.cvtColor(cv_img,cv2.COLOR_RGB2BGR) # 有疑问
-    return cv_img
+    return cv_img[:,:,:3]
 
 # 最大类间方差确定阈值 输入灰度图
 def _var_max_interclass(img, calc_zero=True):
@@ -114,13 +116,18 @@ def separate_color(img, color = 'red'):
         high_hsv = np.array([180, 115, 120])
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
 
-    elif color == 'tuanhua_green':
-        lower_hsv = np.array([0, 0, 140])   # v 120 140
-        high_hsv = np.array([90, 200, 255]) # h 90 93 94
+    elif color == 'th_normal':
+        lower_hsv = np.array([0, 0, 130])   # vlow 120 130 140
+        high_hsv = np.array([100, 255, 255]) # h 90 93 94
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
-    elif color == 'tuanhua_green_v90':
-        lower_hsv = np.array([0, 0, 160])   # v 155 180
-        high_hsv = np.array([93, 200, 255])
+    elif color == 'th_bright':
+        lower_hsv = np.array([0, 0, 180])   # v 155 180
+        high_hsv = np.array([100, 255, 255])
+        mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
+
+    elif color == 'bank_yellow':
+        lower_hsv = np.array([0, 10, 130])  # h(10+) 不然纤维丝覆盖行徽会被干掉
+        high_hsv = np.array([50, 255, 255])
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
 
     # cv2.imshow("mask", mask) # 白色为有校提取区域

@@ -9,14 +9,7 @@ import os
 
 import matplotlib.pyplot as plt
 
-"""
-团花HSV分析
 
-H(0,100) 100以上纤维丝会出现
-S(0, 255)  越大越黄，有偏黄的团花图像
-V(120/180, 255) 控制亮度，亮度大的用180提取
-
-"""
 
 
 # 回调函数，x表示滑块的位置，本例暂不使用
@@ -24,15 +17,13 @@ def nothing(x):
     pass
 
 def hsv_trackbar():
+    # 行徽黄色部分 H(22, 35) S(140, 190) V(180, 255)
+    # S(10+) 纤维丝覆盖到行徽上也可以被提取
+    # S(200, 255) 行徽橙色
 
-    # 团花H(0,90) S(0,200) V(140,255)
-    # imagePath = r'../hanghui/img_tuanhua/tuanhua_uv_1.jpg'
-    # imagePath = r'../tuanhua/img/upuv_qian_1.jpg'
-
-    # imagePath = r'../tuanhua/img/upuv_v128.jpg'
-    # imagePath = r'../tuanhua/img/upuv_qian_2.jpg'
-
-    imagePath = r'../tuanhua/img/all_tuanhua.jpg'
+    imagePath = '../hanghui/img_hanghui/yellow_with_xws.jpg'
+    # imagePath = '../hanghui/img_hanghui/yellow_with_tuanhua.jpg'
+    # imagePath = '../hanghui/img_hanghui/all_bank.jpg'
 
 
     img = cv_imread(imagePath)
@@ -42,12 +33,12 @@ def hsv_trackbar():
 
     # 创建RGB三个滑动条
     cv2.createTrackbar('H1', 'image', 0, 180, nothing)
-    cv2.createTrackbar('H2', 'image', 100, 180, nothing)
+    cv2.createTrackbar('H2', 'image', 50, 180, nothing)
 
-    cv2.createTrackbar('S1', 'image', 0, 255, nothing)
+    cv2.createTrackbar('S1', 'image', 10, 255, nothing)
     cv2.createTrackbar('S2', 'image', 255, 255, nothing)
 
-    cv2.createTrackbar('V1', 'image', 120, 255, nothing)
+    cv2.createTrackbar('V1', 'image', 130, 255, nothing)
     cv2.createTrackbar('V2', 'image', 255, 255, nothing)
 
     res = img.copy()
