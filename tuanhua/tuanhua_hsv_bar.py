@@ -33,6 +33,8 @@ def hsv_trackbar():
     # imagePath = r'../tuanhua/img/upuv_qian_2.jpg'
 
     imagePath = r'../tuanhua/img/all_tuanhua.jpg'
+    imagePath = r'../tuanhua/img/with_xws.jpg'
+
 
 
     img = cv_imread(imagePath)

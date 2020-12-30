@@ -12,10 +12,12 @@ import tools.check as check
 以此可大致确定团花位置
 可作为常量使用
 """
-TH_W = 374
+TH_W = 384  # 374
 TH_H = 145
-TH_XOFF_RIGHT = 25
-TH_YOFF_TOP = 10
+# TH_XOFF_RIGHT = 25  # hualing票据中靠右，团花
+TH_XOFF_RIGHT = 20
+
+TH_YOFF_TOP = 5   # hualing中有更靠上的
 
 
 class ThType(Enum):
@@ -143,7 +145,7 @@ class TuanhuaMeasure:
         # 然后紫外下检测刮擦
         score = 1.0
 
-        print('the dectect tuanhua type:', th_dect.th_type)
+        print('the detect tuanhua type:', th_dect.th_type, th_dect.v_mean)
 
         if th_dect.th_type == ThType.TH_LIGHT:
             score = self._measure_light(th_dect)
@@ -151,6 +153,33 @@ class TuanhuaMeasure:
             score = self._measure_normal(th_dect)
 
         return score
+
+    def _measure_normal(self, tuanhua_roi:TuanHuaROI):
+
+        score_list = []
+
+        for i in range(len(self.template_normal_list)):
+
+            if self.debug:
+                print('start to match id:{0} tuanhua template... '.format(i), end=' ')
+
+            th_temp = self.template_normal_list[i]
+            conf = self._measure_with_one_template(tuanhua_roi, th_temp)
+            score_list.append(conf)
+            # if conf > 0.5:
+            #     break
+
+            if self.debug:
+                print('conf score: {1},'.format(i, conf))
+
+        if max(score_list) < 0.5:
+            print('#############,score list:', score_list)
+
+        return max(score_list)
+
+    def _measure_light(self, tuanhua_roi:TuanHuaROI):
+
+        return 1.0
 
     def _measure_with_one_template(self, dectroi:TuanHuaROI,
                                    temproi:TuanHuaROI):
@@ -220,49 +249,113 @@ class TuanhuaMeasure:
         if xor_1 is None or xor_2 is None:
             return 0.0
 
-        # 左侧5/12 中间2/12 右侧5/12 依照此来确定最终xor
+        # 分割成块，该选择哪一个xor, 通过白色像素数判断
         canvas_h, canvas_w = xor_1.shape[:2]
-        xor_res = xor_1.copy()
 
-        xor_res[0:, canvas_w//2:] = xor_2[0:, canvas_w//2:]
+        # x_list = [9, 6, 7, 6, 9] # 实验得到团花如何分割x轴方向，所占比例
+        x_list = [10, 6, 7, 6, 10]  # 扩展了padding，应该是10
+        times = sum(x_list)
+        sw = canvas_w // times
 
-        cv2.imshow('region_l', l_temp_img.tmp_img)
-        cv2.imshow('region_r', r_temp_img.tmp_img)
+        w_range_list = []
+        l_range_1 = [0, sw*10]
+        r_range_1 = [canvas_w-sw*10, canvas_w]
+        l_range_2 = [l_range_1[1], l_range_1[1]+sw*6]
+        r_range_2 = [r_range_1[0] - sw*6, r_range_1[0]]
 
-        cv2.imshow('tmp and dect', np.hstack((temproi.upuv_box,
-                                              dectroi.upuv_box)))
+        # 中间区域由剩余部分确认
+        mid_range = [l_range_2[1], r_range_2[0]]
 
-        cv2.imshow('tmp and dect bin', np.hstack((temproi.tuanhua_bin,
-                                             dectroi.tuanhua_bin)))
+        w_range_list.append(l_range_1)
+        w_range_list.append(l_range_2)
+        w_range_list.append(mid_range)
+        w_range_list.append(r_range_2)
+        w_range_list.append(r_range_1)
 
-        cv2.imshow('xor_res', np.hstack((xor_1, xor_2, xor_res)))
-        cv2.waitKey(0)
+        # print('tuanhua split areas:',w_range_list)
 
-        conf = self._convert_mask2conf(xor_res)
+        xor_res = np.zeros((canvas_h, canvas_w), dtype=np.uint8)
+
+        for x1, x2 in w_range_list:
+            for y1, y2 in [[0, canvas_h//2], [canvas_h//2, canvas_h]]:
+                w_sum_1 = np.sum(xor_1[y1:y2, x1:x2] > 1)
+                w_sum_2 = np.sum(xor_2[y1:y2, x1:x2] > 1)
+
+                if w_sum_1 > w_sum_2:
+                    xor_res[y1:y2, x1:x2] = xor_2[y1:y2, x1:x2]
+                else:
+                    xor_res[y1:y2, x1:x2] = xor_1[y1:y2, x1:x2]
+
+        if self.debug:
+
+            # cv2.imshow('region_l', l_temp_img.tmp_img)
+            # cv2.imshow('region_r', r_temp_img.tmp_img)
+
+            cv2.imshow('tmp and dect', np.hstack((temproi.upuv_box,
+                                                  dectroi.upuv_box)))
+
+            cv2.imshow('tmp and dect bin', np.hstack((temproi.tuanhua_bin,
+                                                 dectroi.tuanhua_bin)))
+
+            cv2.imshow('xor_res', np.hstack((xor_1, xor_2, xor_res)))
+
+
+        conf = self._mask2confandres(xor_res)
+
 
         return conf
 
-    def _convert_mask2conf(self, mask):
 
-        return 1.0
+    def _mask2confandres(self, mask):
 
-    def _measure_normal(self, tuanhua_roi:TuanHuaROI):
+        tempkernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
+        ero = cv2.erode(mask, tempkernel, iterations=2)
 
-        score_list = []
+        tempkernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
+        ero = cv2.dilate(ero, tempkernel, iterations=2)
 
-        for i in range(len(self.template_normal_list)):
-            print('start to match id:{0} tuanhua template...'.format(i))
-            th_temp = self.template_normal_list[i]
-            conf = self._measure_with_one_template(tuanhua_roi, th_temp)
-            score_list.append(conf)
-            # if conf > 0.5:
-            #     break
+        ero_show = cv2.cvtColor(ero, cv2.COLOR_GRAY2BGR)
 
-        return max(score_list)
+        _, contours, hierarchy = cv2.findContours(ero, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    def _measure_light(self, tuanhua_roi:TuanHuaROI):
+        bianzaolist = []
 
-        return 1.0
+        for i in range(len(contours)):
+            cnt = contours[i]
+            x, y, w, h = cv2.boundingRect(cnt)
+            area = cv2.contourArea(cnt)
+            bianzaolist.append(area)
+
+            if area > 10:
+                cv2.rectangle(ero_show, (x, y), (x + w, y + h), (0, 0, 200))
+
+        bianzaolist.sort(reverse=True)
+
+
+        if self.debug:
+            cv2.imshow('ero img', ero_show)
+            cv2.waitKey(0)
+
+        conf = 1.0
+
+        # 太多了感觉是误检
+        # if len(bianzaolist) >= 15:
+        #     return 0.9
+
+        for ar in bianzaolist:
+            if ar > 50:
+                return 0.1
+            if ar > 40:
+                return 0.2
+            if ar > 20:
+                return 0.3
+            if ar > 10:
+                return 0.4
+
+        if 1 < len(bianzaolist) < 5:
+            conf = 0.9
+
+        return conf
 
 
 
@@ -278,8 +371,15 @@ if __name__ == '__main__':
     th_measure.add_tuanhua_template(path_2)
     th_measure.add_tuanhua_template(path_3)
 
-    tuanhuayc = r'E:\异常图0927\敦南\敦南正常'
+    # tuanhuayc = r'E:\异常图0927\敦南\敦南正常'
+    # tuanhuayc = r'E:\异常图0927\敦南\敦南异常'
+
+    tuanhuayc = r'E:\异常图0927\华菱\正常票'
+
     names = os.listdir(tuanhuayc)
+
+    names = [n for n in names if '01-37-51' in n]
+    th_measure.debug = True
 
     for na in names:
         print('===============processing ', na, '=======================')

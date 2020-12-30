@@ -1,0 +1,702 @@
+D:\Users\lirui\Anaconda3\python.exe E:/YHProject/CheckProcess/tuanhua/tuanhua_measure_multitemplate.py
+you add a tuanhua template: ThType.TH_BRIGHT
+you add a tuanhua template: ThType.TH_NORMAL
+you add a tuanhua template: ThType.TH_NORMAL
+===============processing  20200904_01-35-54 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+===============processing  20200904_01-36-16 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+===============processing  20200904_01-36-24 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.3]    超级黄，背景全黑，类型判断失效
+===============processing  20200904_01-36-30 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.2, 0.3, 0.1]
+===============processing  20200904_01-36-46 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+===============processing  20200904_01-37-01 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.1]     黄
+===============processing  20200904_01-37-08 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.3, 0.1, 0.3]
+===============processing  20200904_01-37-15 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-37-21 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.1]   黄
+===============processing  20200904_01-37-28 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+===============processing  20200904_01-37-40 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+===============processing  20200904_01-37-46 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+===============processing  20200904_01-37-51 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+===============processing  20200904_01-37-59 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+===============processing  20200904_01-38-04 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-38-15 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-38-20 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-38-27 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-38-33 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-38-39 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-38-45 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-38-51 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-38-57 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-39-03 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-39-14 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-39-30 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-39-36 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-39-42 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-39-48 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.4, 0.3]
+===============processing  20200904_01-39-54 行徽真红 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-40-00 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-40-06 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-40-21 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-40-27 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.4, 0.3]
+===============processing  20200904_01-40-33 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.4, 0.2]
+===============processing  20200904_01-40-39 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-40-45 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.3, 0.2]
+===============processing  20200904_01-40-51 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-40-58 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.3, 0.4, 0.4]
+===============processing  20200904_01-41-04 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.4]
+===============processing  20200904_01-41-10 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.3, 0.3, 0.3]
+===============processing  20200904_01-41-16 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.3, 0.4, 0.4]
+===============processing  20200904_01-41-21 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-41-27 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-41-33 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-41-39 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.3, 0.3]
+===============processing  20200904_01-41-45 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-41-51 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.3, 0.4, 0.4]
+===============processing  20200904_01-41-57 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-43-44 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-43-50 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-43-56 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-44-02 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-44-08 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-44-14 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-44-21 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-44-26 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-44-32 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-44-38 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-44-44 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-44-50 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-44-57 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-45-15 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-45-25 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-45-31 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-45-44 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-45-51 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-45-56 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-46-07 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-46-13 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-46-19 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-46-26 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-46-32 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-46-38 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-46-44 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-46-50 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-46-56 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-47-03 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.3, 0.1]
+===============processing  20200904_01-47-09 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-47-15 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-47-21 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.2, 0.1, 0.4]
+===============processing  20200904_01-47-27 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-47-33 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-47-40 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-47-46 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-47-52 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-47-58 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-48-03 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-48-09 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-48-14 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-48-20 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.0, 0.2, 0.3]
+===============processing  20200904_01-48-26 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.0, 0.0, 0.0]
+===============processing  20200904_01-48-32 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-48-38 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-49-02 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-49-07 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-49-14 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-49-20 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-49-26 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.3, 0.4, 0.3]
+===============processing  20200904_01-49-32 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.3, 0.3, 0.3]
+===============processing  20200904_01-49-38 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+===============processing  20200904_01-51-36 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-51-43 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-51-49 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-51-55 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.3, 0.1]
+===============processing  20200904_01-52-02 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-52-07 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-52-13 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-52-19 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-52-25 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.3, 0.1, 0.2]
+===============processing  20200904_01-52-31 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-52-37 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.3, 0.1]
+===============processing  20200904_01-52-43 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-52-49 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.2, 0.1]
+===============processing  20200904_01-52-55 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-53-01 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-53-07 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-53-13 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-53-19 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-53-26 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-53-32 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-53-39 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-53-45 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-53-52 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-53-59 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-54-04 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-54-11 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-54-17 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-54-23 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-54-30 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-54-36 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-54-42 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-54-49 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-54-54 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-55-00 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-55-12 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-55-18 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-55-32 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-55-38 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-55-45 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-56-02 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-56-08 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+===============processing  20200904_01-56-14 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-56-20 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-59-11 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-59-18 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_01-59-24 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-59-31 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-59-37 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.3, 0.3]
+===============processing  20200904_01-59-46 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_01-59-53 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.2, 0.3, 0.4]
+===============processing  20200904_02-00-12 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.3, 0.4, 0.4]
+===============processing  20200904_02-00-21 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.3, 0.1]
+===============processing  20200904_02-00-31 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-00-42 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-00-52 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-01-00 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-01-08 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-01-25 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-01-33 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-01-42 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-21-32 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-21-40 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-21-46 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-21-52 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-21-58 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-22-04 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-22-10 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-22-24 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-22-30 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-22-36 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.4, 0.0]
+===============processing  20200904_02-22-42 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-22-48 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-22-54 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-23-00 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-23-06 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-23-21 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-23-27 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-23-33 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-23-39 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-23-46 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-23-52 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-23-58 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-24-04 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-24-11 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.2, 0.2]
+===============processing  20200904_02-24-17 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-24-23 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.3, 0.4]
+===============processing  20200904_02-24-29 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.4, 0.1]
+===============processing  20200904_02-24-35 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-24-41 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-24-47 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-25-00 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-25-06 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-25-23 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-25-29 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-25-35 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-25-41 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-25-47 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-26-47 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-26-54 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+===============processing  20200904_02-27-08 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-27-15 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-27-21 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-27-26 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-27-33 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-27-48 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-27-54 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-28-01 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-28-07 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-28-21 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-28-27 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-28-32 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-28-39 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-28-45 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-28-51 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-28-58 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-29-05 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-29-12 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-29-19 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-29-25 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-29-32 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-29-38 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-29-45 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-29-51 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.3]
+===============processing  20200904_02-29-57 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-30-04 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.2, 0.3, 0.1]
+===============processing  20200904_02-30-11 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-30-17 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-30-23 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-30-31 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.3]
+===============processing  20200904_02-30-36 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-30-50 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-30-56 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-31-02 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-31-09 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-31-15 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-31-21 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-31-36 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-31-42 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-31-58 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-32-05 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-32-19 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-32-25 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-32-32 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-32-37 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-32-45 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-32-51 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-32-57 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.3]
+===============processing  20200904_02-33-03 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.2]
+===============processing  20200904_02-33-09 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.4]
+===============processing  20200904_02-33-15 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-33-21 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-33-27 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-33-33 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-33-38 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-33-44 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-33-51 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-33-56 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-34-02 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-34-08 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-34-15 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-34-21 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-34-26 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-34-32 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-34-38 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-34-43 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-34-49 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-35-17 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-35-23 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-35-29 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-35-35 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-35-47 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-35-53 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-35-59 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-36-04 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-36-10 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-36-16 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-36-21 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-36-27 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-36-33 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-36-38 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-36-44 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-36-50 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-36-56 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-37-02 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-37-08 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-37-14 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-37-21 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-37-27 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-37-33 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-37-39 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-37-45 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-37-51 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-37-58 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-38-04 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-38-09 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+===============processing  20200904_02-38-15 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.3]
+===============processing  20200904_02-38-21 =======================
+the detect tuanhua type: ThType.TH_NORMAL
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-38-27 =======================
+the detect tuanhua type: ThType.TH_UNKNOW
+#############,score list: [0.1, 0.1, 0.1]
+===============processing  20200904_02-38-33 =======================
+the detect tuanhua type: ThType.TH_LIGHT
+
+Process finished with exit code 0
