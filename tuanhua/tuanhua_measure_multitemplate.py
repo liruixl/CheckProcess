@@ -13,7 +13,7 @@ import tools.check as check
 可作为常量使用
 """
 TH_W = 384  # 374
-TH_H = 145
+TH_H = 150  # 145
 # TH_XOFF_RIGHT = 25  # hualing票据中靠右，团花
 TH_XOFF_RIGHT = 20
 
@@ -97,19 +97,60 @@ class TuanHuaROI:
             self.tuanhua_bin, _ = separate_color(self.upuv_box, color='th_normal')
 
     def _check_tuanhua_type(self, tuanhua_img):
-        tuanhua_hsv = cv2.cvtColor(tuanhua_img, cv2.COLOR_BGR2HSV)
-        # th_h = tuanhua_hsv[:, :, 0]
-        # th_s = tuanhua_hsv[:, :, 1]
-        th_v = tuanhua_hsv[:, :, 2]
+        """
 
-        self.v_mean = np.mean(th_v)
-        if self.v_mean > 135:
-            return ThType.TH_BRIGHT
-        elif self.v_mean > 110:
-            return ThType.TH_NORMAL
-        elif self.v_mean > 80:
+        :param tuanhua_img: 紫外下团花裁剪图像
+        :return: 团花类型
+        类型  pix_sum  v_mean
+        淡化： 9130 180
+        正常：20000+ 205
+        偏黄：22000，219
+        发亮：24000，220
+        """
+        tuanhua_hsv = cv2.cvtColor(tuanhua_img, cv2.COLOR_BGR2HSV)
+
+        # 首先以较大阈值提取出团花图案
+        th_mask, th_bgr = separate_color(self.upuv_box, color='th_normal')
+
+        # 根据【像素数+亮度】两个维度，判断团花类型
+        self.pixel_sum = np.sum(th_mask > 10)
+
+        th_v = tuanhua_hsv[:, :, 2]  # (H*W*1)
+
+        v_sum = 0
+        h, w = th_mask.shape[:2]
+        for y in range(0, h):
+            for x in range(0, w):
+                if th_mask[y][x] > 0:
+                    v_sum += th_v[y][x]
+
+        self.v_mean = v_sum // self.pixel_sum
+
+
+        # print('tuanhua pixel sum:', pixel_sum, end=' ')
+        # print('tuanhua V mean:', self.v_mean)
+        #
+        # cv2.imshow('hsv msk', th_mask)
+        # cv2.imshow('TH', tuanhua_img)
+        # cv2.waitKey(0)
+
+        if self.pixel_sum < 11000 and self.v_mean < 205:
             return ThType.TH_LIGHT
-        return ThType.TH_UNKNOW
+
+        if self.v_mean >= 222 and self.pixel_sum > 22000:
+            return ThType.TH_BRIGHT
+
+        return ThType.TH_NORMAL
+
+        # 之前的规则，使用全图的v_mean, 不太合适
+        # if self.v_mean > 135:
+        #     return ThType.TH_BRIGHT
+        # elif self.v_mean > 110:
+        #     return ThType.TH_NORMAL
+        # elif self.v_mean > 80:
+        #     return ThType.TH_LIGHT
+        #
+        # return ThType.TH_UNKNOW
 
 
 class TuanhuaMeasure:
@@ -145,7 +186,7 @@ class TuanhuaMeasure:
         # 然后紫外下检测刮擦
         score = 1.0
 
-        print('the detect tuanhua type:', th_dect.th_type, th_dect.v_mean)
+        print('the detect tuanhua type:', th_dect.th_type, th_dect.pixel_sum,th_dect.v_mean)
 
         if th_dect.th_type == ThType.TH_LIGHT:
             score = self._measure_light(th_dect)
@@ -339,8 +380,8 @@ class TuanhuaMeasure:
         conf = 1.0
 
         # 太多了感觉是误检
-        # if len(bianzaolist) >= 15:
-        #     return 0.9
+        if len(bianzaolist) >= 15 and bianzaolist[0] < 30:
+            return 0.88
 
         for ar in bianzaolist:
             if ar > 50:
@@ -352,8 +393,8 @@ class TuanhuaMeasure:
             if ar > 10:
                 return 0.4
 
-        if 1 < len(bianzaolist) < 5:
-            conf = 0.9
+        # if 1 < len(bianzaolist) < 5:
+        #     conf = 0.9
 
         return conf
 
@@ -376,9 +417,11 @@ if __name__ == '__main__':
 
     tuanhuayc = r'E:\异常图0927\华菱\正常票'
 
+    # tuanhuayc = r'E:\异常图0927\敦南正常细分\团花\团花黄'
+
     names = os.listdir(tuanhuayc)
 
-    names = [n for n in names if '01-37-51' in n]
+    names = [n for n in names if '20200904_02-23-33' in n]
     th_measure.debug = True
 
     for na in names:
@@ -389,6 +432,9 @@ if __name__ == '__main__':
         cd.init_by_checkdir(imgdir)
 
         conf = th_measure.measure(cd, bbox=None)
+
+        # 测试团花类型判断
+        # th_roi = TuanHuaROI(cd)
 
 
 
