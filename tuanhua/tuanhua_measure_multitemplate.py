@@ -14,10 +14,25 @@ import tools.check as check
 """
 TH_W = 384  # 374
 TH_H = 150  # 145
-# TH_XOFF_RIGHT = 25  # hualing票据中靠右，团花
-TH_XOFF_RIGHT = 20
-
+# TH_XOFF_RIGHT = 25  # hualing票据中有更加靠右的，团花
+TH_XOFF_RIGHT = 16   # 20 18
 TH_YOFF_TOP = 5   # hualing中有更靠上的
+
+
+
+def get_th_bbox(cc_w):
+    """
+
+    :param cc_w:
+    :return:
+    """
+    xmin = cc_w - TH_W - TH_XOFF_RIGHT
+    ymin = TH_YOFF_TOP
+    xmax = xmin + TH_W
+    ymax = ymin + TH_H
+
+    return [xmin, ymin, xmax, ymax]
+
 
 
 class ThType(Enum):
@@ -84,17 +99,23 @@ class TuanHuaROI:
 
         # 在紫外下要忽略文字掩膜区域
         self.text_mask, _ = separate_color(self.upg_box, color="black")
-        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (8, 3))
         self.text_mask = cv2.dilate(self.text_mask, kernel, iterations=1)
 
         # 团花的分类
         self.th_type = self._check_tuanhua_type(self.upuv_box)
+
+        print('curr tuanhua type:', self.th_type)
 
         self.tuanhua_bin = None
         if self.th_type == ThType.TH_BRIGHT:
             self.tuanhua_bin, _ = separate_color(self.upuv_box, color='th_bright')
         else:
             self.tuanhua_bin, _ = separate_color(self.upuv_box, color='th_normal')
+
+        if self.pixel_sum < 18000:
+            self.tuanhua_bin, _ = separate_color(self.upuv_box, color='th_all')
+
 
     def _check_tuanhua_type(self, tuanhua_img):
         """
@@ -110,7 +131,7 @@ class TuanHuaROI:
         tuanhua_hsv = cv2.cvtColor(tuanhua_img, cv2.COLOR_BGR2HSV)
 
         # 首先以较大阈值提取出团花图案
-        th_mask, th_bgr = separate_color(self.upuv_box, color='th_normal')
+        th_mask, th_bgr = separate_color(self.upuv_box, color='th_judge')
 
         # 根据【像素数+亮度】两个维度，判断团花类型
         self.pixel_sum = np.sum(th_mask > 10)
@@ -127,9 +148,9 @@ class TuanHuaROI:
         self.v_mean = v_sum // self.pixel_sum
 
 
-        # print('tuanhua pixel sum:', pixel_sum, end=' ')
-        # print('tuanhua V mean:', self.v_mean)
-        #
+        print('curr tuanhua pixel sum:', self.pixel_sum, end=' ')
+        print('curr tuanhua V mean:', self.v_mean)
+        # #
         # cv2.imshow('hsv msk', th_mask)
         # cv2.imshow('TH', tuanhua_img)
         # cv2.waitKey(0)
@@ -137,7 +158,7 @@ class TuanHuaROI:
         if self.pixel_sum < 11000 and self.v_mean < 205:
             return ThType.TH_LIGHT
 
-        if self.v_mean >= 222 and self.pixel_sum > 22000:
+        if self.v_mean >= 220 and self.pixel_sum >= 24000:
             return ThType.TH_BRIGHT
 
         return ThType.TH_NORMAL
@@ -233,7 +254,7 @@ class TuanhuaMeasure:
         H, W = temproi.upuv_box.shape[:2]
         det_H, det_W = dectroi.upuv_box.shape[:2]
 
-        padding = 10
+        padding = 20
 
         # 四周扩大padding像素b 并将模板放在画布中间
         # canvas = np.zeros((H + padding * 2, W + padding * 2), dtype=np.uint8)
@@ -329,8 +350,8 @@ class TuanhuaMeasure:
 
         if self.debug:
 
-            # cv2.imshow('region_l', l_temp_img.tmp_img)
-            # cv2.imshow('region_r', r_temp_img.tmp_img)
+            cv2.imshow('region_l', l_temp_img.tmp_img)
+            cv2.imshow('region_r', r_temp_img.tmp_img)
 
             cv2.imshow('tmp and dect', np.hstack((temproi.upuv_box,
                                                   dectroi.upuv_box)))
@@ -367,7 +388,7 @@ class TuanhuaMeasure:
             area = cv2.contourArea(cnt)
             bianzaolist.append(area)
 
-            if area > 10:
+            if area >= 15:
                 cv2.rectangle(ero_show, (x, y), (x + w, y + h), (0, 0, 200))
 
         bianzaolist.sort(reverse=True)
@@ -379,19 +400,19 @@ class TuanhuaMeasure:
 
         conf = 1.0
 
-        # 太多了感觉是误检
-        if len(bianzaolist) >= 15 and bianzaolist[0] < 30:
+        # 太多了感觉是误检, 并且都是小面积的
+        if len(bianzaolist) >= 20 and bianzaolist[0] < 30:
             return 0.88
 
         for ar in bianzaolist:
-            if ar > 50:
+            if ar > 100:
                 return 0.1
-            if ar > 40:
+            if ar > 50:
                 return 0.2
-            if ar > 20:
+            if ar > 30:
                 return 0.3
-            if ar > 10:
-                return 0.4
+            # if ar > 10:
+            #     return 0.4
 
         # if 1 < len(bianzaolist) < 5:
         #     conf = 0.9
@@ -407,10 +428,26 @@ if __name__ == '__main__':
     path_1 = r'../tuanhua/20200828_14-44-40_v147'
     path_2 = r'../tuanhua/20200828_14-45-08_v128'
     path_3 = r'../tuanhua/20200828_15-39-29'
+    path_4 = r'../tuanhua/20200904_01-36-30_y_b'
+    path_5 = r'../tuanhua/20200904_02-23-00_y_b_rd'
+
+
+    path_6 = r'../tuanhua/20200904_01-48-26_y_l'
+    path_7 = r'../tuanhua/20200904_01-52-37_y_l_2'
+
+
+
 
     th_measure.add_tuanhua_template(path_1)
     th_measure.add_tuanhua_template(path_2)
     th_measure.add_tuanhua_template(path_3)
+    th_measure.add_tuanhua_template(path_4)
+    th_measure.add_tuanhua_template(path_5)
+    th_measure.add_tuanhua_template(path_6)
+    th_measure.add_tuanhua_template(path_7)
+
+
+
 
     # tuanhuayc = r'E:\异常图0927\敦南\敦南正常'
     # tuanhuayc = r'E:\异常图0927\敦南\敦南异常'
@@ -421,8 +458,8 @@ if __name__ == '__main__':
 
     names = os.listdir(tuanhuayc)
 
-    names = [n for n in names if '20200904_02-23-33' in n]
-    th_measure.debug = True
+    # names = [n for n in names if '94.' in n]
+    # th_measure.debug = True
 
     for na in names:
         print('===============processing ', na, '=======================')

@@ -80,7 +80,7 @@ def separate_color(img, color = 'red'):
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
     elif color == 'black':
         lower_hsv = np.array([0, 0, 0])
-        high_hsv = np.array([180, 255, 70])  # v(0, 46)
+        high_hsv = np.array([180, 255, 60])  # v(0, 46)
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
     elif color == 'white':
         lower_hsv = np.array([0, 0, 180])  # (0,0,221) V 180 正合适
@@ -116,6 +116,14 @@ def separate_color(img, color = 'red'):
         high_hsv = np.array([180, 115, 120])
         mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
 
+    elif color == 'th_all':
+        lower_hsv = np.array([0, 0, 80])
+        high_hsv = np.array([100, 255, 255])
+        mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
+    elif color == 'th_judge':
+        lower_hsv = np.array([0, 0, 130])
+        high_hsv = np.array([100, 255, 255])
+        mask = cv2.inRange(hsv, lowerb=lower_hsv, upperb=high_hsv)
     elif color == 'th_normal':
         lower_hsv = np.array([0, 0, 130])   # vlow 120 130 140
         high_hsv = np.array([100, 255, 255]) # h 90 93 94

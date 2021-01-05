@@ -25,17 +25,7 @@ def nothing(x):
 
 def hsv_trackbar():
 
-    # 团花H(0,90) S(0,200) V(140,255)
-    # imagePath = r'../hanghui/img_tuanhua/tuanhua_uv_1.jpg'
-    # imagePath = r'../tuanhua/img/upuv_qian_1.jpg'
-
-    # imagePath = r'../tuanhua/img/upuv_v128.jpg'
-    # imagePath = r'../tuanhua/img/upuv_qian_2.jpg'
-
-    # imagePath = r'../tuanhua/img/all_tuanhua_2.jpg'
-
-
-    imagePath = r'../tuanhua/img/th_y_l.jpg'
+    imagePath = r'../tuanhua/img_upg/upg_1.jpg'
 
 
 
@@ -46,13 +36,13 @@ def hsv_trackbar():
 
     # 创建RGB三个滑动条
     cv2.createTrackbar('H1', 'image', 0, 180, nothing)
-    cv2.createTrackbar('H2', 'image', 100, 180, nothing)
+    cv2.createTrackbar('H2', 'image', 180, 180, nothing)
 
     cv2.createTrackbar('S1', 'image', 0, 255, nothing)
     cv2.createTrackbar('S2', 'image', 255, 255, nothing)
 
-    cv2.createTrackbar('V1', 'image', 120, 255, nothing)
-    cv2.createTrackbar('V2', 'image', 255, 255, nothing)
+    cv2.createTrackbar('V1', 'image', 0, 255, nothing)
+    cv2.createTrackbar('V2', 'image', 70, 255, nothing)
 
     res = img.copy()
     while True:

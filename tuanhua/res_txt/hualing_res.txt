@@ -1,702 +1,1224 @@
 D:\Users\lirui\Anaconda3\python.exe E:/YHProject/CheckProcess/tuanhua/tuanhua_measure_multitemplate.py
+curr tuanhua pixel sum: 25241 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_BRIGHT
 you add a tuanhua template: ThType.TH_BRIGHT
+curr tuanhua pixel sum: 20641 curr tuanhua V mean: 205
+curr tuanhua type: ThType.TH_NORMAL
 you add a tuanhua template: ThType.TH_NORMAL
+curr tuanhua pixel sum: 22402 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+you add a tuanhua template: ThType.TH_NORMAL
+curr tuanhua pixel sum: 21395 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+you add a tuanhua template: ThType.TH_NORMAL
+curr tuanhua pixel sum: 21137 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+you add a tuanhua template: ThType.TH_NORMAL
+curr tuanhua pixel sum: 13435 curr tuanhua V mean: 207
+curr tuanhua type: ThType.TH_NORMAL
+you add a tuanhua template: ThType.TH_NORMAL
+curr tuanhua pixel sum: 12721 curr tuanhua V mean: 201
+curr tuanhua type: ThType.TH_NORMAL
 you add a tuanhua template: ThType.TH_NORMAL
 ===============processing  20200904_01-35-54 =======================
-the detect tuanhua type: ThType.TH_NORMAL
+curr tuanhua pixel sum: 21027 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21027 224
 ===============processing  20200904_01-36-16 =======================
-the detect tuanhua type: ThType.TH_NORMAL
+curr tuanhua pixel sum: 21430 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21430 227
 ===============processing  20200904_01-36-24 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.3]    超级黄，背景全黑，类型判断失效
+curr tuanhua pixel sum: 21416 curr tuanhua V mean: 226
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21416 226
 ===============processing  20200904_01-36-30 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.2, 0.3, 0.1]
+curr tuanhua pixel sum: 21395 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21395 227
 ===============processing  20200904_01-36-46 =======================
-the detect tuanhua type: ThType.TH_NORMAL
+curr tuanhua pixel sum: 21657 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21657 227
 ===============processing  20200904_01-37-01 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.1]     黄
+curr tuanhua pixel sum: 21620 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21620 225
 ===============processing  20200904_01-37-08 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.3, 0.1, 0.3]
+curr tuanhua pixel sum: 22127 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 22127 227
 ===============processing  20200904_01-37-15 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18586 curr tuanhua V mean: 216
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18586 216
 ===============processing  20200904_01-37-21 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.1]   黄
+curr tuanhua pixel sum: 22304 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 22304 224
 ===============processing  20200904_01-37-28 =======================
-the detect tuanhua type: ThType.TH_NORMAL
+curr tuanhua pixel sum: 21671 curr tuanhua V mean: 226
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21671 226
 ===============processing  20200904_01-37-40 =======================
-the detect tuanhua type: ThType.TH_NORMAL
+curr tuanhua pixel sum: 21794 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21794 227
 ===============processing  20200904_01-37-46 =======================
-the detect tuanhua type: ThType.TH_NORMAL
+curr tuanhua pixel sum: 21620 curr tuanhua V mean: 230
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21620 230
 ===============processing  20200904_01-37-51 =======================
-the detect tuanhua type: ThType.TH_NORMAL
+curr tuanhua pixel sum: 21024 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21024 225
 ===============processing  20200904_01-37-59 =======================
-the detect tuanhua type: ThType.TH_NORMAL
+curr tuanhua pixel sum: 20686 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20686 224
 ===============processing  20200904_01-38-04 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 20703 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20703 224
 ===============processing  20200904_01-38-15 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 21004 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21004 225
 ===============processing  20200904_01-38-20 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19828 curr tuanhua V mean: 234
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19828 234
 ===============processing  20200904_01-38-27 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 20585 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20585 225
 ===============processing  20200904_01-38-33 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 20816 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20816 225
 ===============processing  20200904_01-38-39 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19693 curr tuanhua V mean: 230
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19693 230
 ===============processing  20200904_01-38-45 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19732 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19732 225
 ===============processing  20200904_01-38-51 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19506 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19506 223
 ===============processing  20200904_01-38-57 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19658 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19658 223
 ===============processing  20200904_01-39-03 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18386 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18386 227
 ===============processing  20200904_01-39-14 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18118 curr tuanhua V mean: 220
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18118 220
 ===============processing  20200904_01-39-30 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18582 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18582 221
 ===============processing  20200904_01-39-36 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18308 curr tuanhua V mean: 219
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18308 219
 ===============processing  20200904_01-39-42 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15534 curr tuanhua V mean: 211
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15534 211
 ===============processing  20200904_01-39-48 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.4, 0.3]
+curr tuanhua pixel sum: 15584 curr tuanhua V mean: 206
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15584 206
 ===============processing  20200904_01-39-54 行徽真红 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15391 curr tuanhua V mean: 209
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15391 209
 ===============processing  20200904_01-40-00 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15404 curr tuanhua V mean: 210
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15404 210
 ===============processing  20200904_01-40-06 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15458 curr tuanhua V mean: 211
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15458 211
 ===============processing  20200904_01-40-21 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15510 curr tuanhua V mean: 209
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15510 209
 ===============processing  20200904_01-40-27 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.4, 0.3]
+curr tuanhua pixel sum: 15179 curr tuanhua V mean: 216
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15179 216
 ===============processing  20200904_01-40-33 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.4, 0.2]
+curr tuanhua pixel sum: 14169 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14169 214
 ===============processing  20200904_01-40-39 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 14960 curr tuanhua V mean: 211
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14960 211
 ===============processing  20200904_01-40-45 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.3, 0.2]
+curr tuanhua pixel sum: 15018 curr tuanhua V mean: 205
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15018 205
 ===============processing  20200904_01-40-51 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15498 curr tuanhua V mean: 208
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15498 208
 ===============processing  20200904_01-40-58 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.3, 0.4, 0.4]
+curr tuanhua pixel sum: 15707 curr tuanhua V mean: 207
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15707 207
 ===============processing  20200904_01-41-04 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.4]
+curr tuanhua pixel sum: 15203 curr tuanhua V mean: 210
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15203 210
 ===============processing  20200904_01-41-10 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.3, 0.3, 0.3]
+curr tuanhua pixel sum: 15181 curr tuanhua V mean: 211
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15181 211
 ===============processing  20200904_01-41-16 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.3, 0.4, 0.4]
+curr tuanhua pixel sum: 14967 curr tuanhua V mean: 210
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14967 210
 ===============processing  20200904_01-41-21 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15299 curr tuanhua V mean: 210
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15299 210
 ===============processing  20200904_01-41-27 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 15655 curr tuanhua V mean: 210
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15655 210
 ===============processing  20200904_01-41-33 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15516 curr tuanhua V mean: 216
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15516 216
 ===============processing  20200904_01-41-39 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.3, 0.3]
+curr tuanhua pixel sum: 14784 curr tuanhua V mean: 212
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14784 212
 ===============processing  20200904_01-41-45 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15592 curr tuanhua V mean: 206
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15592 206
 ===============processing  20200904_01-41-51 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.3, 0.4, 0.4]
+curr tuanhua pixel sum: 15913 curr tuanhua V mean: 208
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15913 208
 ===============processing  20200904_01-41-57 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15830 curr tuanhua V mean: 212
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15830 212
 ===============processing  20200904_01-43-44 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15539 curr tuanhua V mean: 212
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15539 212
 ===============processing  20200904_01-43-50 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15777 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15777 214
 ===============processing  20200904_01-43-56 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 15460 curr tuanhua V mean: 211
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15460 211
 ===============processing  20200904_01-44-02 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18377 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18377 224
 ===============processing  20200904_01-44-08 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18902 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18902 223
 ===============processing  20200904_01-44-14 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18583 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18583 223
 ===============processing  20200904_01-44-21 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18979 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18979 223
 ===============processing  20200904_01-44-26 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18168 curr tuanhua V mean: 229
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18168 229
 ===============processing  20200904_01-44-32 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18673 curr tuanhua V mean: 218
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18673 218
 ===============processing  20200904_01-44-38 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18862 curr tuanhua V mean: 222
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18862 222
 ===============processing  20200904_01-44-44 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18709 curr tuanhua V mean: 222
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18709 222
 ===============processing  20200904_01-44-50 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18648 curr tuanhua V mean: 222
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18648 222
 ===============processing  20200904_01-44-57 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19254 curr tuanhua V mean: 220
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19254 220
 ===============processing  20200904_01-45-15 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18700 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18700 224
 ===============processing  20200904_01-45-25 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18695 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18695 221
 ===============processing  20200904_01-45-31 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18584 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18584 221
 ===============processing  20200904_01-45-44 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18901 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18901 221
 ===============processing  20200904_01-45-51 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18832 curr tuanhua V mean: 222
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18832 222
 ===============processing  20200904_01-45-56 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18164 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18164 224
 ===============processing  20200904_01-46-07 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18805 curr tuanhua V mean: 222
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18805 222
 ===============processing  20200904_01-46-13 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18454 curr tuanhua V mean: 218
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18454 218
 ===============processing  20200904_01-46-19 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18770 curr tuanhua V mean: 217
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18770 217
 ===============processing  20200904_01-46-26 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18751 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18751 223
 ===============processing  20200904_01-46-32 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19026 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19026 223
 ===============processing  20200904_01-46-38 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18519 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18519 224
 ===============processing  20200904_01-46-44 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18764 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18764 225
 ===============processing  20200904_01-46-50 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18909 curr tuanhua V mean: 222
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18909 222
 ===============processing  20200904_01-46-56 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19020 curr tuanhua V mean: 219
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19020 219
 ===============processing  20200904_01-47-03 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.3, 0.1]
+curr tuanhua pixel sum: 11868 curr tuanhua V mean: 200
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 11868 200
 ===============processing  20200904_01-47-09 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15521 curr tuanhua V mean: 209
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15521 209
 ===============processing  20200904_01-47-15 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15130 curr tuanhua V mean: 210
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15130 210
 ===============processing  20200904_01-47-21 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.2, 0.1, 0.4]
+curr tuanhua pixel sum: 16450 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16450 224
 ===============processing  20200904_01-47-27 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 16386 curr tuanhua V mean: 218
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16386 218
 ===============processing  20200904_01-47-33 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16753 curr tuanhua V mean: 218
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16753 218
 ===============processing  20200904_01-47-40 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 16679 curr tuanhua V mean: 218
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16679 218
 ===============processing  20200904_01-47-46 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 16440 curr tuanhua V mean: 215
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16440 215
 ===============processing  20200904_01-47-52 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15884 curr tuanhua V mean: 209
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15884 209
 ===============processing  20200904_01-47-58 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15893 curr tuanhua V mean: 209
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15893 209
 ===============processing  20200904_01-48-03 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15644 curr tuanhua V mean: 206
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15644 206
 ===============processing  20200904_01-48-09 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16326 curr tuanhua V mean: 210
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16326 210
 ===============processing  20200904_01-48-14 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16371 curr tuanhua V mean: 207
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16371 207
 ===============processing  20200904_01-48-20 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.0, 0.2, 0.3]
+curr tuanhua pixel sum: 14069 curr tuanhua V mean: 206
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14069 206
 ===============processing  20200904_01-48-26 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.0, 0.0, 0.0]
+curr tuanhua pixel sum: 13435 curr tuanhua V mean: 207
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 13435 207
 ===============processing  20200904_01-48-32 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18847 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18847 221
 ===============processing  20200904_01-48-38 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18436 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18436 221
 ===============processing  20200904_01-49-02 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18891 curr tuanhua V mean: 218
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18891 218
 ===============processing  20200904_01-49-07 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18165 curr tuanhua V mean: 219
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18165 219
 ===============processing  20200904_01-49-14 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19090 curr tuanhua V mean: 219
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19090 219
 ===============processing  20200904_01-49-20 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18569 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18569 223
 ===============processing  20200904_01-49-26 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.3, 0.4, 0.3]
+curr tuanhua pixel sum: 14644 curr tuanhua V mean: 210
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14644 210
 ===============processing  20200904_01-49-32 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.3, 0.3, 0.3]
+curr tuanhua pixel sum: 14871 curr tuanhua V mean: 210
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14871 210
 ===============processing  20200904_01-49-38 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
+curr tuanhua pixel sum: 14575 curr tuanhua V mean: 216
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14575 216
 ===============processing  20200904_01-51-36 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 20199 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20199 225
 ===============processing  20200904_01-51-43 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 862 curr tuanhua V mean: 159
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 862 159
 ===============processing  20200904_01-51-49 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 616 curr tuanhua V mean: 156
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 616 156
 ===============processing  20200904_01-51-55 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.3, 0.1]
+curr tuanhua pixel sum: 12789 curr tuanhua V mean: 197
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 12789 197
 ===============processing  20200904_01-52-02 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 706 curr tuanhua V mean: 159
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 706 159
 ===============processing  20200904_01-52-07 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 611 curr tuanhua V mean: 155
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 611 155
 ===============processing  20200904_01-52-13 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 947 curr tuanhua V mean: 157
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 947 157
 ===============processing  20200904_01-52-19 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 641 curr tuanhua V mean: 156
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 641 156
 ===============processing  20200904_01-52-25 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.3, 0.1, 0.2]
+curr tuanhua pixel sum: 12937 curr tuanhua V mean: 198
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 12937 198
 ===============processing  20200904_01-52-31 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 836 curr tuanhua V mean: 157
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 836 157
 ===============processing  20200904_01-52-37 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.3, 0.1]
+curr tuanhua pixel sum: 12721 curr tuanhua V mean: 201
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 12721 201
 ===============processing  20200904_01-52-43 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 596 curr tuanhua V mean: 153
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 596 153
 ===============processing  20200904_01-52-49 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.2, 0.1]
+curr tuanhua pixel sum: 12473 curr tuanhua V mean: 199
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 12473 199
 ===============processing  20200904_01-52-55 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 702 curr tuanhua V mean: 157
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 702 157
 ===============processing  20200904_01-53-01 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 12207 curr tuanhua V mean: 199
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 12207 199
 ===============processing  20200904_01-53-07 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 13142 curr tuanhua V mean: 200
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 13142 200
 ===============processing  20200904_01-53-13 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 752 curr tuanhua V mean: 159
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 752 159
 ===============processing  20200904_01-53-19 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 20117 curr tuanhua V mean: 228
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20117 228
 ===============processing  20200904_01-53-26 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18186 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18186 221
 ===============processing  20200904_01-53-32 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18622 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18622 221
 ===============processing  20200904_01-53-39 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19337 curr tuanhua V mean: 222
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19337 222
 ===============processing  20200904_01-53-45 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17773 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17773 223
 ===============processing  20200904_01-53-52 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17854 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17854 225
 ===============processing  20200904_01-53-59 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18125 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18125 221
 ===============processing  20200904_01-54-04 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 20166 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20166 227
 ===============processing  20200904_01-54-11 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 20428 curr tuanhua V mean: 234
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20428 234
 ===============processing  20200904_01-54-17 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18467 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18467 223
 ===============processing  20200904_01-54-23 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18362 curr tuanhua V mean: 217
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18362 217
 ===============processing  20200904_01-54-30 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18074 curr tuanhua V mean: 222
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18074 222
 ===============processing  20200904_01-54-36 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19299 curr tuanhua V mean: 228
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19299 228
 ===============processing  20200904_01-54-42 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17824 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17824 225
 ===============processing  20200904_01-54-49 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17486 curr tuanhua V mean: 218
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17486 218
 ===============processing  20200904_01-54-54 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17488 curr tuanhua V mean: 219
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17488 219
 ===============processing  20200904_01-55-00 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17103 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17103 221
 ===============processing  20200904_01-55-12 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17704 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17704 221
 ===============processing  20200904_01-55-18 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 20057 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20057 227
 ===============processing  20200904_01-55-32 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19261 curr tuanhua V mean: 222
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19261 222
 ===============processing  20200904_01-55-38 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18977 curr tuanhua V mean: 226
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18977 226
 ===============processing  20200904_01-55-45 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14767 curr tuanhua V mean: 198
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14767 198
 ===============processing  20200904_01-56-02 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1129 curr tuanhua V mean: 155
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1129 155
 ===============processing  20200904_01-56-08 =======================
-the detect tuanhua type: ThType.TH_NORMAL
+curr tuanhua pixel sum: 20975 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20975 223
 ===============processing  20200904_01-56-14 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14716 curr tuanhua V mean: 203
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14716 203
 ===============processing  20200904_01-56-20 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15631 curr tuanhua V mean: 203
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15631 203
 ===============processing  20200904_01-59-11 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1809 curr tuanhua V mean: 161
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1809 161
 ===============processing  20200904_01-59-18 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 13998 curr tuanhua V mean: 202
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 13998 202
 ===============processing  20200904_01-59-24 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 14032 curr tuanhua V mean: 199
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14032 199
 ===============processing  20200904_01-59-31 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1544 curr tuanhua V mean: 161
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1544 161
 ===============processing  20200904_01-59-37 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.3, 0.3]
+curr tuanhua pixel sum: 12842 curr tuanhua V mean: 205
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 12842 205
 ===============processing  20200904_01-59-46 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1024 curr tuanhua V mean: 157
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1024 157
 ===============processing  20200904_01-59-53 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.2, 0.3, 0.4]
+curr tuanhua pixel sum: 14453 curr tuanhua V mean: 201
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14453 201
 ===============processing  20200904_02-00-12 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.3, 0.4, 0.4]
+curr tuanhua pixel sum: 14733 curr tuanhua V mean: 206
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14733 206
 ===============processing  20200904_02-00-21 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.3, 0.1]
+curr tuanhua pixel sum: 12329 curr tuanhua V mean: 198
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 12329 198
 ===============processing  20200904_02-00-31 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 692 curr tuanhua V mean: 160
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 692 160
 ===============processing  20200904_02-00-42 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 21047 curr tuanhua V mean: 230
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21047 230
 ===============processing  20200904_02-00-52 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16944 curr tuanhua V mean: 219
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16944 219
 ===============processing  20200904_02-01-00 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16727 curr tuanhua V mean: 220
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16727 220
 ===============processing  20200904_02-01-08 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16717 curr tuanhua V mean: 219
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16717 219
 ===============processing  20200904_02-01-25 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19617 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19617 227
 ===============processing  20200904_02-01-33 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17035 curr tuanhua V mean: 220
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17035 220
 ===============processing  20200904_02-01-42 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 19841 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 19841 221
 ===============processing  20200904_02-21-32 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 21272 curr tuanhua V mean: 222
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21272 222
 ===============processing  20200904_02-21-40 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14358 curr tuanhua V mean: 204
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14358 204
 ===============processing  20200904_02-21-46 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1499 curr tuanhua V mean: 160
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1499 160
 ===============processing  20200904_02-21-52 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1249 curr tuanhua V mean: 159
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1249 159
 ===============processing  20200904_02-21-58 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 13662 curr tuanhua V mean: 202
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 13662 202
 ===============processing  20200904_02-22-04 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17128 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17128 221
 ===============processing  20200904_02-22-10 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16887 curr tuanhua V mean: 216
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16887 216
 ===============processing  20200904_02-22-24 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17019 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17019 214
 ===============processing  20200904_02-22-30 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17275 curr tuanhua V mean: 216
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17275 216
 ===============processing  20200904_02-22-36 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.4, 0.0]
+curr tuanhua pixel sum: 16229 curr tuanhua V mean: 215
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16229 215
 ===============processing  20200904_02-22-42 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16716 curr tuanhua V mean: 215
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16716 215
 ===============processing  20200904_02-22-48 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16670 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16670 214
 ===============processing  20200904_02-22-54 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 21242 curr tuanhua V mean: 222
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21242 222
 ===============processing  20200904_02-23-00 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 21137 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21137 225
 ===============processing  20200904_02-23-06 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16430 curr tuanhua V mean: 215
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16430 215
 ===============processing  20200904_02-23-21 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16220 curr tuanhua V mean: 219
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16220 219
 ===============processing  20200904_02-23-27 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 20829 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20829 225
 ===============processing  20200904_02-23-33 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 20394 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 20394 224
 ===============processing  20200904_02-23-39 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 916 curr tuanhua V mean: 157
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 916 157
 ===============processing  20200904_02-23-46 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15943 curr tuanhua V mean: 213
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15943 213
 ===============processing  20200904_02-23-52 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15994 curr tuanhua V mean: 216
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15994 216
 ===============processing  20200904_02-23-58 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16647 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16647 214
 ===============processing  20200904_02-24-04 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16331 curr tuanhua V mean: 212
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16331 212
 ===============processing  20200904_02-24-11 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.2, 0.2]
+curr tuanhua pixel sum: 15642 curr tuanhua V mean: 209
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15642 209
 ===============processing  20200904_02-24-17 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15915 curr tuanhua V mean: 211
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15915 211
 ===============processing  20200904_02-24-23 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.3, 0.4]
+curr tuanhua pixel sum: 15458 curr tuanhua V mean: 207
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15458 207
 ===============processing  20200904_02-24-29 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.4, 0.1]
+curr tuanhua pixel sum: 21883 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21883 227
 ===============processing  20200904_02-24-35 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1404 curr tuanhua V mean: 159
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1404 159
 ===============processing  20200904_02-24-41 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1402 curr tuanhua V mean: 159
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1402 159
 ===============processing  20200904_02-24-47 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15483 curr tuanhua V mean: 202
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15483 202
 ===============processing  20200904_02-25-00 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 967 curr tuanhua V mean: 155
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 967 155
 ===============processing  20200904_02-25-06 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1774 curr tuanhua V mean: 158
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1774 158
 ===============processing  20200904_02-25-23 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1563 curr tuanhua V mean: 159
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1563 159
 ===============processing  20200904_02-25-29 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15522 curr tuanhua V mean: 201
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15522 201
 ===============processing  20200904_02-25-35 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15873 curr tuanhua V mean: 200
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15873 200
 ===============processing  20200904_02-25-41 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17382 curr tuanhua V mean: 217
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17382 217
 ===============processing  20200904_02-25-47 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17099 curr tuanhua V mean: 206
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17099 206
 ===============processing  20200904_02-26-47 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15010 curr tuanhua V mean: 206
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15010 206
 ===============processing  20200904_02-26-54 =======================
-the detect tuanhua type: ThType.TH_NORMAL
+curr tuanhua pixel sum: 21486 curr tuanhua V mean: 221
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21486 221
 ===============processing  20200904_02-27-08 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16771 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16771 214
 ===============processing  20200904_02-27-15 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17217 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17217 214
 ===============processing  20200904_02-27-21 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16897 curr tuanhua V mean: 213
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16897 213
 ===============processing  20200904_02-27-26 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17161 curr tuanhua V mean: 215
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17161 215
 ===============processing  20200904_02-27-33 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1740 curr tuanhua V mean: 159
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1740 159
 ===============processing  20200904_02-27-48 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15286 curr tuanhua V mean: 202
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15286 202
 ===============processing  20200904_02-27-54 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 2063 curr tuanhua V mean: 163
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 2063 163
 ===============processing  20200904_02-28-01 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15757 curr tuanhua V mean: 205
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15757 205
 ===============processing  20200904_02-28-07 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1742 curr tuanhua V mean: 159
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1742 159
 ===============processing  20200904_02-28-21 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15652 curr tuanhua V mean: 203
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15652 203
 ===============processing  20200904_02-28-27 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15941 curr tuanhua V mean: 204
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15941 204
 ===============processing  20200904_02-28-32 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1669 curr tuanhua V mean: 156
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1669 156
 ===============processing  20200904_02-28-39 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 2231 curr tuanhua V mean: 160
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 2231 160
 ===============processing  20200904_02-28-45 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1990 curr tuanhua V mean: 161
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1990 161
 ===============processing  20200904_02-28-51 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15876 curr tuanhua V mean: 203
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15876 203
 ===============processing  20200904_02-28-58 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17864 curr tuanhua V mean: 212
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17864 212
 ===============processing  20200904_02-29-05 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16977 curr tuanhua V mean: 216
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16977 216
 ===============processing  20200904_02-29-12 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18122 curr tuanhua V mean: 213
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18122 213
 ===============processing  20200904_02-29-19 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17876 curr tuanhua V mean: 211
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17876 211
 ===============processing  20200904_02-29-25 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18647 curr tuanhua V mean: 211
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18647 211
 ===============processing  20200904_02-29-32 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17524 curr tuanhua V mean: 215
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17524 215
 ===============processing  20200904_02-29-38 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17887 curr tuanhua V mean: 211
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17887 211
 ===============processing  20200904_02-29-45 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17117 curr tuanhua V mean: 209
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17117 209
 ===============processing  20200904_02-29-51 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.3]
+curr tuanhua pixel sum: 22413 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 22413 227
 ===============processing  20200904_02-29-57 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 22356 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 22356 227
 ===============processing  20200904_02-30-04 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.2, 0.3, 0.1]
+curr tuanhua pixel sum: 22526 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 22526 224
 ===============processing  20200904_02-30-11 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 22225 curr tuanhua V mean: 227
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 22225 227
 ===============processing  20200904_02-30-17 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 22207 curr tuanhua V mean: 226
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 22207 226
 ===============processing  20200904_02-30-23 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 22725 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 22725 224
 ===============processing  20200904_02-30-31 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.3]
+curr tuanhua pixel sum: 22730 curr tuanhua V mean: 228
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 22730 228
 ===============processing  20200904_02-30-36 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16420 curr tuanhua V mean: 204
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16420 204
 ===============processing  20200904_02-30-50 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16303 curr tuanhua V mean: 203
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16303 203
 ===============processing  20200904_02-30-56 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 2037 curr tuanhua V mean: 155
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 2037 155
 ===============processing  20200904_02-31-02 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16434 curr tuanhua V mean: 200
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16434 200
 ===============processing  20200904_02-31-09 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1834 curr tuanhua V mean: 156
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1834 156
 ===============processing  20200904_02-31-15 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16036 curr tuanhua V mean: 200
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16036 200
 ===============processing  20200904_02-31-21 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 2137 curr tuanhua V mean: 158
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 2137 158
 ===============processing  20200904_02-31-36 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15740 curr tuanhua V mean: 200
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15740 200
 ===============processing  20200904_02-31-42 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16113 curr tuanhua V mean: 200
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16113 200
 ===============processing  20200904_02-31-58 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1572 curr tuanhua V mean: 157
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1572 157
 ===============processing  20200904_02-32-05 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15684 curr tuanhua V mean: 202
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15684 202
 ===============processing  20200904_02-32-19 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15653 curr tuanhua V mean: 202
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15653 202
 ===============processing  20200904_02-32-25 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1834 curr tuanhua V mean: 157
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1834 157
 ===============processing  20200904_02-32-32 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17775 curr tuanhua V mean: 216
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17775 216
 ===============processing  20200904_02-32-37 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18291 curr tuanhua V mean: 212
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18291 212
 ===============processing  20200904_02-32-45 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1240 curr tuanhua V mean: 155
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1240 155
 ===============processing  20200904_02-32-51 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1375 curr tuanhua V mean: 158
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1375 158
 ===============processing  20200904_02-32-57 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.3]
+curr tuanhua pixel sum: 21825 curr tuanhua V mean: 224
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21825 224
 ===============processing  20200904_02-33-03 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.2]
+curr tuanhua pixel sum: 22237 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 22237 223
 ===============processing  20200904_02-33-09 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.4]
+curr tuanhua pixel sum: 21219 curr tuanhua V mean: 220
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21219 220
 ===============processing  20200904_02-33-15 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 22116 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 22116 225
 ===============processing  20200904_02-33-21 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17166 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17166 214
 ===============processing  20200904_02-33-27 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17556 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17556 214
 ===============processing  20200904_02-33-33 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17299 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17299 214
 ===============processing  20200904_02-33-38 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14431 curr tuanhua V mean: 202
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14431 202
 ===============processing  20200904_02-33-44 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14597 curr tuanhua V mean: 200
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14597 200
 ===============processing  20200904_02-33-51 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14393 curr tuanhua V mean: 202
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14393 202
 ===============processing  20200904_02-33-56 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17595 curr tuanhua V mean: 208
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17595 208
 ===============processing  20200904_02-34-02 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18046 curr tuanhua V mean: 212
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18046 212
 ===============processing  20200904_02-34-08 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17304 curr tuanhua V mean: 213
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17304 213
 ===============processing  20200904_02-34-15 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18011 curr tuanhua V mean: 210
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18011 210
 ===============processing  20200904_02-34-21 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17006 curr tuanhua V mean: 220
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17006 220
 ===============processing  20200904_02-34-26 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14154 curr tuanhua V mean: 201
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14154 201
 ===============processing  20200904_02-34-32 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17121 curr tuanhua V mean: 212
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17121 212
 ===============processing  20200904_02-34-38 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14160 curr tuanhua V mean: 200
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14160 200
 ===============processing  20200904_02-34-43 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 21476 curr tuanhua V mean: 223
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21476 223
 ===============processing  20200904_02-34-49 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17356 curr tuanhua V mean: 211
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17356 211
 ===============processing  20200904_02-35-17 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17047 curr tuanhua V mean: 209
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17047 209
 ===============processing  20200904_02-35-23 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18224 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18224 214
 ===============processing  20200904_02-35-29 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 18011 curr tuanhua V mean: 213
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 18011 213
 ===============processing  20200904_02-35-35 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14941 curr tuanhua V mean: 203
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14941 203
 ===============processing  20200904_02-35-47 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1747 curr tuanhua V mean: 159
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1747 159
 ===============processing  20200904_02-35-53 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1186 curr tuanhua V mean: 157
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1186 157
 ===============processing  20200904_02-35-59 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1589 curr tuanhua V mean: 157
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1589 157
 ===============processing  20200904_02-36-04 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14548 curr tuanhua V mean: 201
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14548 201
 ===============processing  20200904_02-36-10 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14879 curr tuanhua V mean: 202
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14879 202
 ===============processing  20200904_02-36-16 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1344 curr tuanhua V mean: 156
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1344 156
 ===============processing  20200904_02-36-21 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 15097 curr tuanhua V mean: 197
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 15097 197
 ===============processing  20200904_02-36-27 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14404 curr tuanhua V mean: 200
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14404 200
 ===============processing  20200904_02-36-33 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1425 curr tuanhua V mean: 158
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1425 158
 ===============processing  20200904_02-36-38 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17147 curr tuanhua V mean: 215
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17147 215
 ===============processing  20200904_02-36-44 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17385 curr tuanhua V mean: 215
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17385 215
 ===============processing  20200904_02-36-50 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17619 curr tuanhua V mean: 215
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17619 215
 ===============processing  20200904_02-36-56 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14527 curr tuanhua V mean: 199
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14527 199
 ===============processing  20200904_02-37-02 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 989 curr tuanhua V mean: 157
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 989 157
 ===============processing  20200904_02-37-08 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16998 curr tuanhua V mean: 208
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16998 208
 ===============processing  20200904_02-37-14 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1071 curr tuanhua V mean: 155
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1071 155
 ===============processing  20200904_02-37-21 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17188 curr tuanhua V mean: 213
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17188 213
 ===============processing  20200904_02-37-27 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17507 curr tuanhua V mean: 215
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17507 215
 ===============processing  20200904_02-37-33 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16819 curr tuanhua V mean: 212
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16819 212
 ===============processing  20200904_02-37-39 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 16603 curr tuanhua V mean: 210
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 16603 210
 ===============processing  20200904_02-37-45 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17163 curr tuanhua V mean: 212
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17163 212
 ===============processing  20200904_02-37-51 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17079 curr tuanhua V mean: 214
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17079 214
 ===============processing  20200904_02-37-58 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 21559 curr tuanhua V mean: 225
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21559 225
 ===============processing  20200904_02-38-04 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17003 curr tuanhua V mean: 219
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17003 219
 ===============processing  20200904_02-38-09 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 17288 curr tuanhua V mean: 212
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 17288 212
 ===============processing  20200904_02-38-15 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.3]
+curr tuanhua pixel sum: 21716 curr tuanhua V mean: 226
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21716 226
 ===============processing  20200904_02-38-21 =======================
-the detect tuanhua type: ThType.TH_NORMAL
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 21880 curr tuanhua V mean: 226
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 21880 226
 ===============processing  20200904_02-38-27 =======================
-the detect tuanhua type: ThType.TH_UNKNOW
-#############,score list: [0.1, 0.1, 0.1]
+curr tuanhua pixel sum: 1062 curr tuanhua V mean: 157
+curr tuanhua type: ThType.TH_LIGHT
+the detect tuanhua type: ThType.TH_LIGHT 1062 157
 ===============processing  20200904_02-38-33 =======================
-the detect tuanhua type: ThType.TH_LIGHT
+curr tuanhua pixel sum: 14439 curr tuanhua V mean: 196
+curr tuanhua type: ThType.TH_NORMAL
+the detect tuanhua type: ThType.TH_NORMAL 14439 196
 
 Process finished with exit code 0
